@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "arial";
+  }
+  
+  body {
+   overflow-x: hidden;
+  
+  }
+  
+
+  /* MENU y2k */
+  nav {
+   
+    color: white;
+    padding: 0;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: ridge 2px grey;
+    backdrop-filter: blur(100%);
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    z-index: 0; /* Certifica-se de que o conteúdo esteja acima */
+
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav li {
+    margin: 25px 0;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: #e0e0e0;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    opacity: 1;
+    background: linear-gradient(90deg, #707070, #a0a0a0, #707070); /* Gradiente para o efeito metálico */
+    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    text-shadow:
+        1px 1px 2px rgba(255, 255, 255, 0.4), /* Brilho suave para destacar o texto */
+        -1px -1px 2px rgba(0, 0, 0, 0.5), /* Sombras escuras para dar contraste e profundidade */
+        0 0 8px rgba(255, 255, 255, 0.6), /* Brilho mais forte para simular o efeito metálico */
+        0 0 10px rgba(255, 255, 255, 0.4); /* Brilho mais suave ao redor para destacar ainda mais */
+  }
+  
+  nav a:hover {
+    color: #db1dc2;
+    background-color: grey;
+  }
+
+
+  .menu-y2k::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(./imgs/metal.jpg); */
+    background: linear-gradient(
+      270deg,
+      #e6e9bf, #d2b5aa, #cbaea3,
+      #d4b5ab, #d2b5aa, #cbaea3, #d4b5ab
+  );
+    background-size: cover;
+    filter: brightness(1) opacity(1); /* Reduz o brilho */
+    z-index: -1; /* Coloca atrás do conteúdo */
+    backdrop-filter: blur(20px);
+    background-size: 100% 100%;
+    animation: brilho-titanio 8s infinite linear;
+}
+
+
+  
+  /* SEÇÕES */
+  main {
+   width: 100vw;
+   box-sizing: border-box;
+  }
+  
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* PRIMEIRA SEÇÃO (COBRE TELA INTEIRA) */
+  #home {
+    background: linear-gradient(
+     90deg,  
+    rgba(70, 69, 68, 0.7) , rgba(150, 7, 150, 0.7)), url('./imgs/salão.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+
+  /* Animação texto do titulo do salão*/
+  #titulo-home{
+   opacity: 0;
+   animation: fadein-titulo 2s ease-in forwards;
+   pointer-events: none;
+   user-select: none;
+   -webkit-user-drag: none;
+  }
+
+  @keyframes fadein-titulo {
+    to {
+      opacity: 1;
+    }
+  }
+
+  #subtitulo-home {
+    opacity: 0;
+    font-family: "Pixelify Sans";
+    font-size: 30px;
+
+  }
+
+  
+  /* SEGUNDA SEÇÃO (COM OVERLAP) */
+  #servicos {
+    background: #FF77FF;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap: 200px;
+    flex-direction: column;
+    
+    justify-content: start;
+    text-align: center;
+    position: relative;
+  }
+  
+ #servicos > * {
+   top: 0;
+
+ }
+
+
+
+
+  #servicos h2 {
+    
+    
+  }
+
+
+  #servicos h2{
+
+  }
+
+  /*janelas dos serviços*/
+
+  #janelas-serviços{
+   
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+
+    
+  }
+
+  #janelas-serviços li{
+     position: relative;
+    box-sizing: border-box;
+    height: 200px;
+    width: 300px;
+    border: outset 1px;
+    overflow-y: hidden;
+    background-color: rgb(196, 187, 191);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+
+
+  #janelas-serviços li:hover{
+    transform: scale(1.05);
+  }
+
+  #janelas-serviços li > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit:  fill;
+    display: block;
+    margin-top: -2px;
+    z-index: 1;
+  }
+
+ .title-bar{
+   position: absolute; 
+   height: 20px;
+   width: 100%;
+   background-color: rgb(255, 0, 255);
+   display: grid;
+   grid-template-columns:  1fr auto  auto auto auto;
+   z-index: 2;
+ }
+
+
+ .title-bar  p {
+  justify-self: start;
+  font-family: "Pixelify Sans";
+  font-weight: bold;
+  margin-left: 20px;
+ }
+
+ .title-bar img {
+  justify-content: end;
+  height: 20px;
+  width: auto;
+  user-select: none;
+  pointer-events: none;
+ }
+
+
+
+
+/* ---------------------------------------- JANELAS MODAL ----------------------------------------*/
+
+
+#overlay{
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.97);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#overlay.active{
+  opacity: 1;
+  visibility: visible;
+  z-index: 99999;
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 200px;
+  background: #ffb9dc;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.4s ease;
+    z-index: 99999999999;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title-bar-modal{
+  background:#FF69B4;
+  display: grid;
+  grid-template-columns:  1fr auto  auto auto auto;
+  height: 50px;
+}
+
+.buttons{
+ 
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.buttons img  {
+  object-fit: contain;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+
+.modal.expandir{
+  width: 80%;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: none;
+  pointer-events: all;
+  transition: all 0.4s ease;
+  opacity: 1;
+  overflow: hidden;
+
+  transform: translate(-50% , -50%);
+}
+
+.conteudo {
+  height: 100%;
+}
+
+
+.imagens-modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "a b"
+  "c b"
+  
+   ;
+  
+ 
+}
+
+.imagens-modal > img {
+ 
+}
+
+.imagens-modal img {
+ width: auto;
+ 
+}
+
+ .imagens-modal img:nth-child(1) {
+    aspect-ratio: 3/2;
+    width: 100%;
+    position: relative;
+    top: 6vh;
+    margin-left: 1%;
+  
+}
+
+
+
+/* ////////////////////////////////////// Moldura do celular estilo fliper /////////////////////////////////////////////////////////*/
+.imagens-modal img:nth-child(2) {
+   aspect-ratio: 1/1;
+    width: 30vw;
+    height: 670px;
+   position: relative;
+   top: -6vh;
+   left: 6vh;
+   user-select: none;
+
+ } 
+
+
+
+/* ///////////////////////////////////////  Tela do celular com serviços ///////////////////////////////////////////////////// */
+
+#phone-screen {
+  height: 71vh;
+  width: 24.5vw;
+  background-color: blue;
+  position: absolute;
+  top: 16vh;
+  left: 98vh;
+  border-radius: 5%;
+  z-index: 999999999999999999;
+}
+
+
+
+
+
+
+
+
+ .imagens-modal h2:nth-child(3){
+font-size: 40px;
+font-family: "Pixelify Sans";
+position: relative;
+top: -30vh;
+text-align: center;
+
+
+  
+}  
+
+
+
+
+
+
+  #galeria{
+    height: 100vh;
+    background-color: rgb(219, 77, 188);
+  }

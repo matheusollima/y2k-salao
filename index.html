@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salão Elegance</title>
+  <link rel="stylesheet" href="estilo.css">
+  <!--- FONTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+
+  <!-- MENU ESQUERDO -->
+
+  <header class = "header">
+    <nav class = "menu-y2k">
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- SEÇÃO 1 (TELA INTEIRA) -->
+    <section id="home">
+      <img id = 'titulo-home' src="./imgs/y2k-text.png" alt="">
+      <p id = 'subtitulo-home'>Transformando sua beleza desde o inicio do milênio</p>
+    </section>
+
+    <!-- SEÇÃO 2 (COM OVERLAP) -->
+    <section id="servicos">
+      <h2>Nossos Serviços</h2>
+      <ul id = "janelas-serviços">
+        <li id = "janela-corte-cabelo">
+          <div class="title-bar">
+          <p>Corte de Cabelo</p>
+          <img src="./imgs/minimize-window.png" alt="">
+          <img src="./imgs/maximize-window.png" alt="">
+          <img src="./imgs/close-window.png" alt="">
+         </div>
+         <img src="./imgs/corte-de-cabelo.webp" alt="">
+      </li>
+        <li><div class="title-bar">
+          <p>Coloração</p>
+          <img src="./imgs/minimize-window.png" alt="">
+          <img src="./imgs/maximize-window.png" alt="">
+          <img src="./imgs/close-window.png" alt="">
+        </div>
+        <img src="./imgs/coloracao.jpg" alt="">
+      </li>
+        <li><div class="title-bar">
+          <p>Tratamentos Capilares</p>
+          <img src="./imgs/minimize-window.png" alt="">
+          <img src="./imgs/maximize-window.png" alt="">
+          <img src="./imgs/close-window.png" alt="">
+        </div>
+       <img src="./imgs/tratamentos-capilares.png" alt="">
+      </li>
+        <li><div class="title-bar">
+          <p>Alisamentos e Reduções de Volume</p>
+            <img src="./imgs/minimize-window.png" alt="">
+          <img src="./imgs/maximize-window.png" alt="">
+          <img src="./imgs/close-window.png" alt="">
+        </div>
+      <img src="./imgs/Alisamentos.jpeg" alt=""></li>
+      </ul>
+    </section>
+
+    <div id = "overlay"></div>
+    <div class = "modal" id="modal-corte-cabelo">
+      <div class = "title-bar-modal">
+        <span>Detalhes do serviço</span>
+         <div class = "buttons">
+ 
+          <img  src="./imgs/close-window.png" alt="" class = "fechar">
+         </div>
+      </div>
+       <div class = "conteudo">
+         
+         <div class = "imagens-modal">
+          <img id = "img01" src="./imgs/corte-cabelo-modal.jpg" alt="">
+         <img id = "img02" src="./imgs/tela-serviços-removebg-preview.png" alt="" draggable="false">
+          <h2  id = "titulo-serviço" >Cortes de cabelo</h2>
+         
+         </div>
+         <div id="phone-screen">
+           
+         </div>
+       </div>
+   
+    </div>
+
+    <section id = "galeria"></section>
+  </main>
+
+
+
+</body>
+</html>
