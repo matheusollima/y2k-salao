@@ -377,10 +377,33 @@
   top: 16vh;
   left: 98vh;
   border-radius: 5%;
-  z-index: 999999999999999999;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px red;
+  flex-direction: column;
+}
+
+#phone-screen .cortes{
+  background-color: red;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
+
+.phone-buttons {
+  display: flex;
+  gap: 30px;
+  color: #00f0ff;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+}
 
 
 

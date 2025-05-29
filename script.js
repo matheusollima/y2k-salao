@@ -14,6 +14,7 @@ let body = document.querySelector("body");
 janela_corte_cabelo.addEventListener("click", ()=>{
     modal.classList.add("expandir");
     overlay.classList.add("active");
+    mostrarFeminino();
     document.body.style.overflowY = "hidden";
     if(overlay.classList.contains("active")){
         overlay.addEventListener("click", () => {
@@ -33,4 +34,17 @@ fechar.addEventListener("click", () => {
     
 });
 
+// ........................... TELA DE SERVIÇOS DE CORTE DE CABELO ........................
 
+const cortesMasculinos = ["Fade", "Moicano", "Degradê", "Razor Part", "Corte militar"];
+const cortesFemininos = ["Chanel", "Long Bob", "Pixie", "Corte em camadas", "Franja cortininha"];
+function mostrarMasculino(){
+let cortes = document.querySelector(".cortes");
+ cortes.innerHTML = cortesMasculinos.map(p=> `<p>${p}</p>`).join("");
+
+}
+function mostrarFeminino(){
+let cortes = document.querySelector(".cortes");
+ cortes.innerHTML = cortesFemininos.map(p=> `<p>${p}</p>`).join("");
+
+}
