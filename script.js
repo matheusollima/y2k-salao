@@ -36,15 +36,39 @@ fechar.addEventListener("click", () => {
 
 // ........................... TELA DE SERVIÇOS DE CORTE DE CABELO ........................
 
-const cortesMasculinos = ["Fade", "Moicano", "Degradê", "Razor Part", "Corte militar"];
-const cortesFemininos = ["Chanel", "Long Bob", "Pixie", "Corte em camadas", "Franja cortininha"];
+const tituloMasculino = "Cortes masculinos";
+const tituloFeminino = "Cortes femininos";
+const cortesMasculinos = [{nome: "Fade", preco: "R$ 30"}, {nome:"Moicano", preco: "R$ 30"}, {nome: "Degradê", preco: "R$ 30"},{nome: "Razor Part", preco: "R$ 30"}, {nome: "Corte militar", preco : "R$ 30"}];
+const cortesFemininos = [{nome: "Chanel", preco: "R$ 30"}, {nome: "Long Bob", preco: "R$ 30"}, {nome: "Pixie", preco: "R$ 30"}, {nome: "Corte em camadas", preco: "R$ 30"}, {nome: "Franja cortininha", preco : "R$ 30"}];
+const barra_titulo = document.querySelector(".barra-titulo"); 
+const botaoMasculino = document.getElementById('cortesMasculinos');
+const botaoFeminino = document.getElementById('cortesFemininos');
 function mostrarMasculino(){
+ 
+ botaoMasculino.style.color = "#DA70D6 ";
+ botaoFeminino.style.color =    "#00f0ff";
 let cortes = document.querySelector(".cortes");
- cortes.innerHTML = cortesMasculinos.map(p=> `<p>${p}</p>`).join("");
+barra_titulo.innerHTML = `<p>${tituloMasculino}</p>`;
+ cortes.innerHTML = cortesMasculinos.map(corte=> 
+    `
+     <div class = "corte" > 
+     <p>${corte.nome}</p>
+     <p>${corte.preco}</p>
+     </div>
+     `).join("");
 
 }
 function mostrarFeminino(){
+
+ botaoFeminino.style.color = "#DA70D6 ";
+  botaoMasculino.style.color = "#00f0ff";
 let cortes = document.querySelector(".cortes");
- cortes.innerHTML = cortesFemininos.map(p=> `<p>${p}</p>`).join("");
+barra_titulo.innerHTML = `<p>${tituloFeminino}</p>`;
+  cortes.innerHTML = cortesFemininos.map(corte=> 
+    `<div class = "corte" >
+     <p>${corte.nome}</p>
+     <p>${corte.preco}</p>
+     </div>
+    `).join("");
 
 }

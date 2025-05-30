@@ -1,13 +1,25 @@
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('fonts/Minecraftia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+ 
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "arial";
+  
   }
   
   body {
    overflow-x: hidden;
-  
+
   }
   
 
@@ -372,7 +384,7 @@
 #phone-screen {
   height: 71vh;
   width: 24.5vw;
-  background-color: blue;
+  background-color:#ead4c4;
   position: absolute;
   top: 16vh;
   left: 98vh;
@@ -382,23 +394,85 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 2px red;
+  box-sizing: border-box;
+  
   flex-direction: column;
 }
 
-#phone-screen .cortes{
-  background-color: red;
-  margin-top: auto;
-  margin-bottom: auto;
+#phone-screen * {
+  font-family: 'Minecraftia', monospace;
+  font-size: 15px;
 }
 
+.barra-titulo{
+  width: 100%;
+  height: 10vh;
+  border-radius: 5%;
+  background-color: #04248d;
+  color: #00f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+ .barra-titulo * {
+  
+    font-family: 'Minecraftia', monospace;
+  }
+
+
+
+#phone-screen .cortes{
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  justify-content: start;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+  box-sizing: border-box;
+  width: 100%;
+  
+}
+
+.corte {
+  box-sizing: border-box;
+  width: 24vw;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  color: #2546ab;
+  font-family: 'Minecraftia', monospace;
+  
+}
+
+.corte :first-child {
+  margin-left: 5%;
+}
 
 
 .phone-buttons {
   display: flex;
-  gap: 30px;
+  flex-direction: row;
+ justify-content: space-between;
   color: #00f0ff;
+  width: 100%;
+  border-radius: 0 0 5% 5%;
+  background-color: #192e71;
+  height: 10vh;
+  align-items: center;
 }
+
+
+.phone-buttons :first-child{
+  margin-left: 3vw;
+}
+
+.phone-buttons :nth-child(2){
+  margin-right: 3vw;
+}
+
 
 .button {
   cursor: pointer;
