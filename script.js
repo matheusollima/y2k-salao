@@ -43,32 +43,70 @@ const cortesFemininos = [{nome: "Chanel", preco: "R$ 30"}, {nome: "Long Bob", pr
 const barra_titulo = document.querySelector(".barra-titulo"); 
 const botaoMasculino = document.getElementById('cortesMasculinos');
 const botaoFeminino = document.getElementById('cortesFemininos');
+
 function mostrarMasculino(){
- 
+ let cortes = document.querySelector(".cortes");
+ cortes.innerHTML = '';
  botaoMasculino.style.color = "#DA70D6 ";
  botaoFeminino.style.color =    "#00f0ff";
-let cortes = document.querySelector(".cortes");
-barra_titulo.innerHTML = `<p>${tituloMasculino}</p>`;
- cortes.innerHTML = cortesMasculinos.map(corte=> 
-    `
-     <div class = "corte" > 
-     <p>${corte.nome}</p>
-     <p>${corte.preco}</p>
-     </div>
-     `).join("");
+ 
+ barra_titulo.innerHTML = `<p>${tituloMasculino}</p>`;
+ let total = cortesMasculinos.length;
+ console.log(total);
+ for(i = 0 ; i <total; i++){
+   if(i % 2 == 0) {
+    const div = document.createElement('div')
+    div.classList.add('div-cor01');
+    const pNome = document.createElement('p');
+    const pPreco = document.createElement('p');
+    pNome.textContent = cortesMasculinos[i].nome;
+    pPreco.textContent = cortesMasculinos[i].preco;
+    div.appendChild(pNome);
+    div.appendChild(pPreco);
+    cortes.appendChild(div);
+
+   } else {
+    const div = document.createElement('div')
+    div.classList.add('div-cor02');
+    const pNome = document.createElement('p');
+    const pPreco = document.createElement('p');
+    pNome.textContent = cortesMasculinos[i].nome;
+    pPreco.textContent = cortesMasculinos[i].preco;
+    div.appendChild(pNome);
+    div.appendChild(pPreco);
+    cortes.appendChild(div);
+   }
+ }
 
 }
+
+
 function mostrarFeminino(){
-
- botaoFeminino.style.color = "#DA70D6 ";
-  botaoMasculino.style.color = "#00f0ff";
 let cortes = document.querySelector(".cortes");
+cortes.innerHTML = '';
+botaoFeminino.style.color = "#DA70D6 ";
+botaoMasculino.style.color = "#00f0ff";
 barra_titulo.innerHTML = `<p>${tituloFeminino}</p>`;
-  cortes.innerHTML = cortesFemininos.map(corte=> 
-    `<div class = "corte" >
-     <p>${corte.nome}</p>
-     <p>${corte.preco}</p>
-     </div>
-    `).join("");
+ let total = cortesFemininos.length;
+ console.log(total);
+ for(i = 0 ; i <total; i++){
+   if(i % 2 == 0) {
+    const p = document.createElement('p');
+    p.classList.add('p-cor01');
+    p.textContent = cortesFemininos[i].nome;
+    cortes.appendChild(p);
+   } else {
+    const p = document.createElement('p');
+    p.classList.add('p-cor02');
+    p.textContent = cortesFemininos[i].nome;
+    cortes.appendChild(p);
+   }
+ }
 
 }
+
+
+// scroll phone screen
+
+let scrollScreen = document.getElementById('phone-screen');
+scrollScreen.scrollTop = 10000;

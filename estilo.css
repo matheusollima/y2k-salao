@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Minecraftia';
-  src: url('fonts/Minecraftia-Regular.ttf') format('truetype');
+  src: url('fonts/MotorolaScreentype.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 
@@ -395,9 +395,31 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  
   flex-direction: column;
+
 }
+
+
+#pixelated-layer {
+    height: 71vh;
+  width: 24.5vw;
+  background-color:#ead4c4;
+  position: absolute;
+  top: 16vh;
+  left: 98vh;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  opacity: 0.4;
+  pointer-events: none;
+  
+}
+
+
 
 #phone-screen * {
   font-family: 'Minecraftia', monospace;
@@ -408,7 +430,7 @@
   width: 100%;
   height: 10vh;
   border-radius: 5%;
-  background-color: #04248d;
+  background: linear-gradient(to right, #000033, #0044aa, #0066cc, #0044aa, #000033);
   color: #00f0ff;
   display: flex;
   justify-content: center;
@@ -430,10 +452,53 @@
   justify-content: start;
   margin-top: auto;
   margin-bottom: auto;
-  
   box-sizing: border-box;
+  height: 100%;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
   
+}
+
+
+.div-cor01 {
+  background-color: yellow;
+  display: flex;
+  width: 24.5vw;
+  border: solid 2px purple;
+  justify-content: space-between;
+}
+
+.div-cor02 {
+  display: flex;
+  width: 24.5vw;
+  background-color: red;
+ 
+  justify-content: space-between;
+}
+
+.div-cor01 :nth-child(2),
+.div-cor02 :nth-child(2) {
+  margin-right: 1vw;
+}
+
+.cortes::-webkit-scrollbar {
+  width: 8px;
+  z-index: 999999999;
+}
+
+.cortes::-webkit-scrollbar-track {
+  background: white;
+}
+
+.cortes::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 0;
+}
+
+.cortes {
+  scrollbar-width: thin;
+  scrollbar-color: blue white;
 }
 
 .corte {
@@ -451,6 +516,10 @@
   margin-left: 5%;
 }
 
+.corte :nth-child(2){
+  margin-right: 6%;
+}
+
 
 .phone-buttons {
   display: flex;
@@ -459,18 +528,30 @@
   color: #00f0ff;
   width: 100%;
   border-radius: 0 0 5% 5%;
-  background-color: #192e71;
+  background:linear-gradient(to right, #000033, #0044aa, #0066cc, #0044aa, #000033);;
   height: 10vh;
   align-items: center;
 }
 
+.phone-buttons * {
+  
+}
 
 .phone-buttons :first-child{
   margin-left: 3vw;
+  z-index: 99999;
 }
 
+
 .phone-buttons :nth-child(2){
+  color: white;
+  text-align: center;
+  margin-top: -2vh;
+}
+
+.phone-buttons :nth-child(3){
   margin-right: 3vw;
+  z-index: 99999;
 }
 
 
