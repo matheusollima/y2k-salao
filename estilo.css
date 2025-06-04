@@ -18,8 +18,8 @@
   }
   
   body {
-   overflow-x: hidden;
-
+   /* overflow-x: hidden; */
+   
   }
   
 
@@ -97,8 +97,7 @@
   
   /* SEÇÕES */
   main {
-   width: 100vw;
-   box-sizing: border-box;
+   background-color: red;
   }
   
   section {
@@ -119,7 +118,7 @@
     align-items: center;
 
     top: 0;
-    width: 100%;
+    width: 90%;
     z-index: -2;
   }
 
@@ -151,7 +150,7 @@
     background: #FF77FF;
     box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     gap: 200px;
     flex-direction: column;
@@ -184,24 +183,30 @@
   #janelas-serviços{
    
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    /* grid-template-columns: repeat(4, 1fr); */
+    max-width: 100%;
     list-style: none;
     justify-content: center;
-    gap: 20px;
-
+    box-sizing: border-box;
+    border: 1px solid red;
+    background-color: #000033;
     
+  }
+
+
+  #janelas-serviços * {
+    border: solid 2px blue;
   }
 
   #janelas-serviços li{
      position: relative;
     box-sizing: border-box;
-    height: 200px;
-    width: 300px;
     border: outset 1px;
     overflow-y: hidden;
     background-color: rgb(196, 187, 191);
     transition: transform 0.3s ease;
     cursor: pointer;
+    width: 320px;
   }
 
 

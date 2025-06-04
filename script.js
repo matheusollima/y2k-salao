@@ -17,6 +17,7 @@ let body = document.querySelector("body");
 let servicos_container = document.querySelector(".servicos-container");
 let barra_titulo = document.querySelector(".barra-titulo");
 let titulo_servico = document.getElementById("titulo-servico");
+let img_servico = document.getElementById('img01');
 let tituloMasculino;
 let tituloFeminino;
 let servicosMasculinos;
@@ -54,6 +55,8 @@ janelas_servico.forEach((botao) => {
       case "corte-cabelo":
         tituloMasculino = "Cortes Masculinos";
         tituloFeminino = "Cortes Femininos";
+        img_servico.src = "./imgs/imagens modal/corte-cabelo-modal.jpg";
+        titulo_servico.innerText = "Cortes de cabelo ";
         servicosMasculinos = [
           { nome: "Fade", preco: "R$ 30" },
           { nome: "Moicano", preco: "R$ 30" },
@@ -75,6 +78,8 @@ janelas_servico.forEach((botao) => {
       case "coloracao":
         tituloFeminino = "Coloração - feminino";
         tituloMasculino = "Coloração - masculino";
+        img_servico.src = "./imgs/imagens modal/coloracao-modal.jpg";
+        titulo_servico.innerText = "Coloração";
         servicosFemininos = [
           { nome: "Coloração Global", preco: "R$ 180,00" },
           { nome: "Mechas", preco: "R$ 280,00" },
@@ -102,7 +107,71 @@ janelas_servico.forEach((botao) => {
           { nome: "Descoloração Total", preco: "R$ 150,00" },
           { nome: "Raiz ou Manutenção", preco: "R$ 70,00" },
         ];
+        mostrarFeminino();
+        break;
+      case "tratamentos-capilares":
+        tituloFeminino = "Tratamentos - feminino";
+        tituloMasculino = "Tratamentos - masculino";
+        img_servico.src = "./imgs/imagens modal/tratamento-capilar-modal.jpg";
+        titulo_servico.innerText = "Tratamentos capilares";
+        servicosFemininos = [
+          { nome: "Hidratação Profunda", preco: "R$ 90,00" },
+          { nome: "Reconstrução Capilar", preco: "R$ 120,00" },
+          { nome: "Nutrição Capilar", preco: "R$ 100,00" },
+          { nome: "Cauterização", preco: "R$ 150,00" },
+          { nome: "Botox Capilar", preco: "R$ 200,00" },
+          { nome: "Selagem Térmica", preco: "R$ 220,00" },
+          { nome: "Alisamento / Escova Progressiva", preco: "R$ 300,00" },
+          { nome: "Plástica dos Fios", preco: "R$ 280,00" },
+          { nome: "Terapia Capilar", preco: "R$ 130,00" },
+          { nome: "Cronograma Capilar", preco: "R$ 350,00" }
+        ];
 
+        servicosMasculinos = [
+          { nome: "Terapia para Queda de Cabelo", preco: "R$ 120,00" },
+          { nome: "Fortalecimento Capilar", preco: "R$ 100,00" },
+          { nome: "Hidratação Express", preco: "R$ 70,00" },
+          { nome: "Controle de Oleosidade", preco: "R$ 80,00" },
+          { nome: "Tratamento Anti-Caspa", preco: "R$ 90,00" },
+          { nome: "Estimulação do Crescimento", preco: "R$ 150,00" },
+          { nome: "Relaxamento Capilar", preco: "R$ 130,00" },
+          { nome: "Corte Terapêutico", preco: "R$ 60,00" },
+          { nome: "Peeling Capilar", preco: "R$ 100,00" },
+          { nome: "Barba e Cabelo - Hidratação Conjunta", preco: "R$ 110,00" }
+        ];
+        mostrarFeminino();
+        break;
+
+      case "alisamentos":
+        tituloFeminino = "Tratamentos - feminino";
+        tituloMasculino = "Tratamentos - masculino";
+        img_servico.src = "./imgs/imagens modal/alisamento-modal.jpg";
+        titulo_servico.innerText = "Alisamentos e reduções de volume";
+        servicosFemininos = [
+          { nome: "Escova Progressiva", preco: "R$ 300,00" },
+          { nome: "Botox Capilar", preco: "R$ 200,00" },
+          { nome: "Selagem Térmica", preco: "R$ 220,00" },
+          { nome: "Plástica dos Fios", preco: "R$ 280,00" },
+          { nome: "Alisamento Definitivo", preco: "R$ 400,00" },
+          { nome: "Relaxamento Capilar Feminino", preco: "R$ 180,00" },
+          { nome: "Escova de Ácido Hialurônico", preco: "R$ 250,00" },
+          { nome: "Escova de Carbocisteína", preco: "R$ 240,00" },
+          { nome: "Nanoplastia", preco: "R$ 350,00" },
+          { nome: "Taninoplastia", preco: "R$ 320,00" }
+        ];
+        servicosMasculinos = [
+          { nome: "Relaxamento Capilar Masculino", preco: "R$ 130,00" },
+          { nome: "Botox Capilar", preco: "R$ 150,00" },
+          { nome: "Selagem Térmica", preco: "R$ 160,00" },
+          { nome: "Plástica Capilar", preco: "R$ 180,00" },
+          { nome: "Alisamento com Pomada Térmica", preco: "R$ 90,00" },
+          { nome: "Escova Progressiva Masculina", preco: "R$ 200,00" },
+          { nome: "Defrisagem", preco: "R$ 120,00" },
+          { nome: "Redução de Volume com Queratina", preco: "R$ 140,00" },
+          { nome: "Nanoplastia", preco: "R$ 250,00" },
+          { nome: "Alisamento Temporário", preco: "R$ 100,00" }
+        ];
+        mostrarFeminino();
         break;
     }
   });
