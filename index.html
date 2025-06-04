@@ -50,11 +50,11 @@ h1 {
       <p id = 'subtitulo-home'>Transformando sua beleza desde o inicio do milênio</p>
     </section>
 
-    <!-- SEÇÃO 2 (COM OVERLAP) -->
+    <!-- SESSÃO DE SERVIÇOS -->
     <section id="servicos">
       <h2>Nossos Serviços</h2>
       <ul id = "janelas-serviços">
-        <li id = "janela-corte-cabelo">
+        <li class = "janela-servico" data-id = 'corte-cabelo' >
           <div class="title-bar">
           <p>Corte de Cabelo</p>
           <img src="./imgs/minimize-window.png" alt="">
@@ -63,7 +63,8 @@ h1 {
          </div>
          <img src="./imgs/corte-de-cabelo.webp" alt="">
       </li>
-        <li><div class="title-bar">
+        <li class = "janela-servico" data-id = 'coloracao'>
+          <div class="title-bar">
           <p>Coloração</p>
           <img src="./imgs/minimize-window.png" alt="">
           <img src="./imgs/maximize-window.png" alt="">
@@ -71,7 +72,7 @@ h1 {
         </div>
         <img src="./imgs/coloracao.jpg" alt="">
       </li>
-        <li><div class="title-bar">
+        <li class = "janela-servico" data-id = 'tratamentos-capilares'><div class="title-bar">
           <p>Tratamentos Capilares</p>
           <img src="./imgs/minimize-window.png" alt="">
           <img src="./imgs/maximize-window.png" alt="">
@@ -79,7 +80,8 @@ h1 {
         </div>
        <img src="./imgs/tratamentos-capilares.png" alt="">
       </li>
-        <li><div class="title-bar">
+        <li class = "janela-servico" data-id = 'alisamentos'>
+          <div class="title-bar">
           <p>Alisamentos e Reduções de Volume</p>
             <img src="./imgs/minimize-window.png" alt="">
           <img src="./imgs/maximize-window.png" alt="">
@@ -89,8 +91,11 @@ h1 {
       </ul>
     </section>
 
+
+
+  <!-- JANELA MODAL CORTES DE CABELO     -->
     <div id = "overlay"></div>
-    <div class = "modal" id="modal-corte-cabelo">
+    <div class = "modal" id="janela-modal">
       <div class = "title-bar-modal">
         <span>Detalhes do serviço</span>
          <div class = "buttons">
@@ -103,12 +108,12 @@ h1 {
          <div class = "imagens-modal">
           <img id = "img01" src="./imgs/corte-cabelo-modal.jpg" alt="">
          <img id = "img02" src="./imgs/tela-serviços-removebg-preview.png" alt="" draggable="false">
-          <h2  id = "titulo-serviço" >Cortes de cabelo</h2>
+          <h2  id = "titulo-servico" >Cortes de cabelo</h2>
          
          </div>
          <div id="phone-screen">
           <div class = "barra-titulo"></div>
-          <div class = "cortes"></div>
+          <div class = "servicos-container"></div>
            <div class = "phone-buttons">
               <div class = "button" id = "cortesFemininos" onclick="mostrarFeminino()" >Feminino</div>
                <span class = "button">&#9776;</span>
@@ -117,8 +122,21 @@ h1 {
          </div>
           <img src="imgs/pixelated-layer.jpg" alt="" id = "pixelated-layer" draggable="false"></div>
        </div>
-   
     </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <section id = "galeria">
       <h1>Olá, mundo</h1>
