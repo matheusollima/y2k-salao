@@ -220,16 +220,19 @@ function listar_servicos(lista_servicos, servicos_container) {
   }
 
   // Definir o tamanho dos elementos na tela
-  const phone_screen = servicos_container;
-  const estilo = window.getComputedStyle(phone_screen);
-  const phone_screen_altura = estilo.height;
-  console.log("altura da phone screen", phone_screen_altura);
-  document.querySelectorAll(".div-cor01").forEach((el) => {
-    el.style.height = `calc(${phone_screen_altura}/${total})`;
-  });
-  document.querySelectorAll(".div-cor02").forEach((el) => {
-    el.style.height = `calc(${phone_screen_altura}/${total})`;
-  });
+  // const phone_screen = servicos_container;
+  // const estilo = window.getComputedStyle(phone_screen);
+  // const phone_screen_altura = estilo.height;
+  // console.log("altura da phone screen", phone_screen_altura);
+  // document.querySelectorAll(".div-cor01").forEach((el) => {
+  //   el.style.height = `calc(${phone_screen_altura}/${total})`;
+  // });
+  // document.querySelectorAll(".div-cor02").forEach((el) => {
+  //   el.style.height = `calc(${phone_screen_altura}/${total})`;
+  // });
+
+
+  
 }
 
 function mostrarMasculino() {
