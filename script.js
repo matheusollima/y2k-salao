@@ -251,6 +251,4 @@ function mostrarFeminino() {
   listar_servicos(servicosFemininos, servicos_container);
 }
 
-// ............................ JANELA MODAL - COLORAÇÃO ....................................
 
-let janela_coloracao = document.getElementById("janela-coloracao");
