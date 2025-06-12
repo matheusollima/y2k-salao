@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +15,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<style>
-  
-
-
-
-h1 {
-  color: red;
-  font-family: 'Minecraftia';
-}
-</style>
   <!-- MENU ESQUERDO -->
 
-  <header class = "header">
-    <nav class = "menu-y2k">
+  <header class="header">
+    <nav class="menu-y2k">
       <ul>
         <li><a href="#home">Início</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -40,88 +32,91 @@ h1 {
       </ul>
     </nav>
   </header>
-  
+
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <!-- SEÇÃO 1 (TELA INTEIRA) -->
-    <section class = "section" id="home">
-      <img id = 'titulo-home' src="./imgs/y2k-text.png" alt="">
-      <p id = 'subtitulo-home'>Transformando sua beleza desde o inicio do milênio</p>
+    <section class="section" id="home">
+      <img id='titulo-home' src="./imgs/y2k-text.png" alt="">
+      <p id='subtitulo-home'>Transformando sua beleza desde o inicio do milênio</p>
     </section>
 
     <!-- SESSÃO DE SERVIÇOS -->
-    <section class = "section" id="servicos">
-      <h2>Nossos Serviços</h2>
-      <ul id = "janelas-serviços">
-        <li class = "janela-servico" data-id = 'corte-cabelo' >
+    <section class="section" id="servicos">
+      <h1>Nossos Serviços</h1>
+      <ul id="janelas-serviços">
+        <li class="janela-servico" data-id='corte-cabelo'>
           <div class="title-bar">
-          <p>Corte de Cabelo</p>
-          <img src="./imgs/minimize-window.png" alt="">
-          <img src="./imgs/maximize-window.png" alt="">
-          <img src="./imgs/close-window.png" alt="">
-         </div>
-         <img src="./imgs/corte-de-cabelo.webp" alt="">
-      </li>
-        <li class = "janela-servico" data-id = 'coloracao'>
-          <div class="title-bar">
-          <p>Coloração</p>
-          <img src="./imgs/minimize-window.png" alt="">
-          <img src="./imgs/maximize-window.png" alt="">
-          <img src="./imgs/close-window.png" alt="">
-        </div>
-        <img src="./imgs/coloracao.jpg" alt="">
-      </li>
-        <li class = "janela-servico" data-id = 'tratamentos-capilares'><div class="title-bar">
-          <p>Tratamentos Capilares</p>
-          <img src="./imgs/minimize-window.png" alt="">
-          <img src="./imgs/maximize-window.png" alt="">
-          <img src="./imgs/close-window.png" alt="">
-        </div>
-       <img src="./imgs/tratamentos-capilares.png" alt="">
-      </li>
-        <li class = "janela-servico" data-id = 'alisamentos'>
-          <div class="title-bar">
-          <p>Alisamentos e Reduções de Volume</p>
+            <p>Corte de Cabelo</p>
             <img src="./imgs/minimize-window.png" alt="">
-          <img src="./imgs/maximize-window.png" alt="">
-          <img src="./imgs/close-window.png" alt="">
-        </div>
-      <img src="./imgs/Alisamentos.jpeg" alt=""></li>
+            <img src="./imgs/maximize-window.png" alt="">
+            <img src="./imgs/close-window.png" alt="">
+          </div>
+          <img src="./imgs/corte-de-cabelo.webp" alt="">
+        </li>
+        <li class="janela-servico" data-id='coloracao'>
+          <div class="title-bar">
+            <p>Coloração</p>
+            <img src="./imgs/minimize-window.png" alt="">
+            <img src="./imgs/maximize-window.png" alt="">
+            <img src="./imgs/close-window.png" alt="">
+          </div>
+          <img src="./imgs/coloracao.jpg" alt="">
+        </li>
+        <li class="janela-servico" data-id='tratamentos-capilares'>
+          <div class="title-bar">
+            <p>Tratamentos Capilares</p>
+            <img src="./imgs/minimize-window.png" alt="">
+            <img src="./imgs/maximize-window.png" alt="">
+            <img src="./imgs/close-window.png" alt="">
+          </div>
+          <img src="./imgs/tratamentos-capilares.png" alt="">
+        </li>
+        <li class="janela-servico" data-id='alisamentos'>
+          <div class="title-bar">
+            <p>Alisamentos e Reduções de Volume</p>
+            <img src="./imgs/minimize-window.png" alt="">
+            <img src="./imgs/maximize-window.png" alt="">
+            <img src="./imgs/close-window.png" alt="">
+          </div>
+          <img src="./imgs/Alisamentos.jpeg" alt="">
+        </li>
       </ul>
     </section>
 
 
 
-  <!-- JANELA MODAL -->
-    <div id = "overlay"></div>
-    <div class = "modal" id="janela-modal">
-      <div class = "title-bar-modal">
+    <!-- JANELA MODAL -->
+    <div id="overlay"></div>
+    <div class="modal" id="janela-modal">
+      <div class="title-bar-modal">
         <span>Detalhes do serviço</span>
-         <div class = "buttons">
- 
-          <img  src="./imgs/close-window.png" alt="" class = "fechar">
-         </div>
+        <div class="buttons">
+
+          <img src="./imgs/close-window.png" alt="" class="fechar">
+        </div>
       </div>
-       <div class = "conteudo">
-         
-         <div class = "imagens-modal">
-          <img id = "img01" src="" alt="">
-         <img id = "img02" src="./imgs/tela-serviços-removebg-preview.png" alt="" draggable="false">
-          <h2  id = "titulo-servico" >Cortes de cabelo</h2>
-         
-         </div>
-         <div id="phone-screen">
-          <div class = "barra-titulo"></div>
-          <div class = "servicos-container"></div>
-           <div class = "phone-buttons">
-              <div class = "button" id = "cortesFemininos" onclick="mostrarFeminino()" >Feminino</div>
-               <span class = "button">&#9776;</span>
-              <div class = "button" id = "cortesMasculinos" onclick = "mostrarMasculino()" >Masculino</div>
-           </div>
-         </div>
-          <img src="imgs/pixelated-layer.jpg" alt="" id = "pixelated-layer" draggable="false"></div>
-       </div>
+      <div class="conteudo">
+
+        <div class="imagens-modal">
+          <img id="img01" src="" alt="">
+          <img id="img02" src="./imgs/tela-serviços-removebg-preview.png" alt="" draggable="false">
+          <h2 id="titulo-servico">Cortes de cabelo</h2>
+
+        </div>
+        <div id="phone-screen">
+          <div class="barra-titulo"></div>
+          <div class="servicos-container"></div>
+          <div class="phone-buttons">
+            <div class="button" id="cortesFemininos" onclick="mostrarFeminino()">Feminino</div>
+            <span class="button">&#9776;</span>
+            <div class="button" id="cortesMasculinos" onclick="mostrarMasculino()">Masculino</div>
+          </div>
+        </div>
+        <img src="imgs/pixelated-layer.jpg" alt="" id="pixelated-layer" draggable="false">
+      </div>
+    </div>
     </div>
 
 
@@ -129,26 +124,53 @@ h1 {
 
 
 
-    <section class = "section" id = "galeria">
-        <div class = "galeria-fotos">
-        <img src="imgs/fotos-galeria/leao.jpg" alt="Leão">
-        <img src="imgs/fotos-galeria/girafa.jpg"  alt="Girafa">
-        <img src="imgs/fotos-galeria/zebra.jpg"  alt="Zebra">
-        <img src="imgs/fotos-galeria/hipopotamo.jpg"  alt="Hipopótamo">
-    </div>
+    <section class="section" id="galeria">
+      <h1>Galeria</h1>
+      <div class="galeria-fotos">
+        <img src="imgs/fotos-galeria/foto01.jpg" alt="">
+        <img src="imgs/fotos-galeria/foto02.jpg" alt="">
+        <img src="imgs/fotos-galeria/foto03.jpg" alt="">
+        <img src="imgs/fotos-galeria/foto04.jpg" alt="">
+      </div>
     </section>
-      <section class = "section" id = "agendamento">
+
+
+    <section class="section" id="agendamento">
       <h1>Olá, mundo</h1>
     </section>
-      <section class = "section" id = "sobre">
+    <section class="section" id="sobre">
       <h1>Olá, mundo</h1>
     </section>
-      <section class = "section" id = "contato">
-      <h1>Olá, mundo</h1>
+    <section class="section" id="contato">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.7362385797583!2d-46.67974882548031!3d-23.73805486810587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f007aca56ef%3A0xd2d48a13135f5f95!2sRua%20Aurora%20Boreal!5e0!3m2!1spt-BR!2sbr!4v1749742023535!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="container-info-contato">
+        <div class="endereco">
+          <h1>Endereço</h1>
+          <p>Rua Aurora Boreal, 275 – Bela Vista, São Paulo – SP</p>
+        </div>
+        <div class="telefone">
+          <h1>Telefone</h1>
+<p>(11) 90000-0000</p>
+        </div>
+        <div class="email">
+          <h1>Email</h1>
+          <p>contato.y2ksalao@gmail.com</p>
+        </div>
+        <div class="redes-sociais">
+          <h1></h1>
+        </div>
+      </div>
+      <footer></footer>
     </section>
+
   </main>
 
 
 
 </body>
+
 </html>

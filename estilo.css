@@ -1,15 +1,31 @@
 @font-face {
-  font-family: "Minecraftia";
+  font-family: "motorola";
   src: url("fonts/MotorolaScreentype.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "minecraft";
+  src: url("fonts/Minecraftia-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pixelada";
+  src: url("fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "arial";
+  font-family: "pixelada";
 }
 
 body {
@@ -25,8 +41,10 @@ nav {
   flex-direction: row;
   border-bottom: ridge 2px grey;
   backdrop-filter: blur(100%);
-  position: relative; /* Necessário para posicionar o pseudo-elemento */
-  z-index: 0; /* Certifica-se de que o conteúdo esteja acima */
+  position: relative;
+  /* Necessário para posicionar o pseudo-elemento */
+  z-index: 0;
+  /* Certifica-se de que o conteúdo esteja acima */
 }
 
 nav ul {
@@ -47,20 +65,23 @@ nav a {
   font-size: 18px;
   transition: 0.3s;
   opacity: 1;
-  background: linear-gradient(
-    90deg,
-    #707070,
-    #a0a0a0,
-    #707070
-  ); /* Gradiente para o efeito metálico */
-  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-  color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  background: linear-gradient(90deg,
+      #707070,
+      #a0a0a0,
+      #707070);
+  /* Gradiente para o efeito metálico */
+  -webkit-background-clip: text;
+  /* Aplica o gradiente apenas ao texto */
+  color: transparent;
+  /* Torna o texto transparente para mostrar o gradiente */
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4),
-    /* Brilho suave para destacar o texto */ -1px -1px 2px rgba(0, 0, 0, 0.5),
-    /* Sombras escuras para dar contraste e profundidade */ 0 0 8px
-      rgba(255, 255, 255, 0.6),
-    /* Brilho mais forte para simular o efeito metálico */ 0 0 10px
-      rgba(255, 255, 255, 0.4); /* Brilho mais suave ao redor para destacar ainda mais */
+    /* Brilho suave para destacar o texto */
+    -1px -1px 2px rgba(0, 0, 0, 0.5),
+    /* Sombras escuras para dar contraste e profundidade */
+    0 0 8px rgba(255, 255, 255, 0.6),
+    /* Brilho mais forte para simular o efeito metálico */
+    0 0 10px rgba(255, 255, 255, 0.4);
+  /* Brilho mais suave ao redor para destacar ainda mais */
 }
 
 nav a:hover {
@@ -76,43 +97,40 @@ nav a:hover {
   width: 100%;
   height: 100%;
   /* background-image: url(./imgs/metal.jpg); */
-  background: linear-gradient(
-    270deg,
-    #e6e9bf,
-    #d2b5aa,
-    #cbaea3,
-    #d4b5ab,
-    #d2b5aa,
-    #cbaea3,
-    #d4b5ab
-  );
+  background: linear-gradient(270deg,
+      #e6e9bf,
+      #d2b5aa,
+      #cbaea3,
+      #d4b5ab,
+      #d2b5aa,
+      #cbaea3,
+      #d4b5ab);
   background-size: cover;
-  filter: brightness(1) opacity(1); /* Reduz o brilho */
-  z-index: -1; /* Coloca atrás do conteúdo */
+  filter: brightness(1) opacity(1);
+  /* Reduz o brilho */
+  z-index: -1;
+  /* Coloca atrás do conteúdo */
   backdrop-filter: blur(20px);
   background-size: 100% 100%;
   animation: brilho-titanio 8s infinite linear;
 }
 
 /* SEÇÕES */
-main {
- 
-}
+main {}
 
 section {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #6600cc;
 }
 
 /* PRIMEIRA SEÇÃO (efeito parallax) */
 #home {
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       rgba(70, 69, 68, 0.7),
-      rgba(150, 7, 150, 0.7)
-    ),
+      rgba(150, 7, 150, 0.7)),
     url("./imgs/salão.jpg");
   background-attachment: fixed;
   box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.5);
@@ -147,73 +165,81 @@ section {
   font-size: 30px;
 }
 
-/* SECTION SERVIÇOS*/
+/* --------------------------------- SECTION SERVIÇOS ----------------------------------- */
 #servicos {
   background: #ff77ff;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
   height: 100vh;
   width: 100%;
   display: flex;
-  gap: 7vw;
   flex-direction: column;
-
-  justify-content: start;
+  justify-content: center;
   text-align: center;
   position: relative;
-  background-attachment: fixed;
+
 }
 
-#servicos > * {
-  top: 0;
+#servicos>* {}
+
+#servicos h1 {
+
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+
 }
 
-#servicos h2 {
-}
 
-#servicos h2 {
-}
 
 /*janelas dos serviços*/
 
 #janelas-serviços {
   display: grid;
   grid-template-columns: repeat(2, 25vw);
-  max-width: 100%;
+  margin-top: 30px;
   list-style: none;
   justify-content: center;
   box-sizing: border-box;
   padding-left: 1vw;
   padding-right: 1vw;
-  gap: 1vw;
- 
+  gap: 2vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 
-#janelas-serviços * {
-}
+#janelas-serviços * {}
 
 #janelas-serviços li {
   position: relative;
   box-sizing: border-box;
   border: outset 1px;
-  overflow-y: hidden;
+  overflow: hidden;
   background-color: rgb(196, 187, 191);
   transition: transform 0.3s ease;
   cursor: pointer;
   width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 #janelas-serviços li:hover {
   transform: scale(1.05);
 }
 
-#janelas-serviços li > img {
+#janelas-serviços li>img {
   position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: fill;
   display: block;
   margin-top: -2px;
   z-index: 1;
+
 }
 
 .title-bar {
@@ -224,6 +250,7 @@ section {
   display: grid;
   grid-template-columns: 1fr auto auto auto auto;
   z-index: 2;
+  align-self: start;
 }
 
 .title-bar p {
@@ -327,8 +354,7 @@ section {
     "c b";
 }
 
-.imagens-modal > img {
-}
+.imagens-modal>img {}
 
 .imagens-modal img {
   width: auto;
@@ -391,7 +417,7 @@ section {
 }
 
 #phone-screen * {
-  font-family: "Minecraftia", monospace;
+  font-family: "motorola", monospace;
   font-size: 20px;
 }
 
@@ -399,21 +425,20 @@ section {
   width: 100%;
   height: 10vh;
   border-radius: 5%;
-  background: linear-gradient(
-    to right,
-    #000033,
-    #0044aa,
-    #0066cc,
-    #0044aa,
-    #000033
-  );
+  background: linear-gradient(to right,
+      #000033,
+      #0044aa,
+      #0066cc,
+      #0044aa,
+      #000033);
   color: #00f0ff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .barra-titulo * {
-  font-family: "Minecraftia", monospace;
+  font-family: "motorola", monospace;
 }
 
 #phone-screen .servicos-container {
@@ -433,7 +458,7 @@ section {
   background-color: #d9dddc;
   display: flex;
   width: 24.5vw;
-   height: 70.1312px;
+  height: 70.1312px;
   justify-content: space-between;
   align-items: center;
 }
@@ -441,7 +466,7 @@ section {
 .div-cor02 {
   display: flex;
   width: 24.5vw;
-   height: 70.1312px;
+  height: 70.1312px;
   background-color: #88807b;
   align-items: center;
   justify-content: space-between;
@@ -493,7 +518,7 @@ section {
   box-sizing: border-box;
   justify-content: space-between;
   color: #2546ab;
-  font-family: "Minecraftia", monospace;
+  font-family: "motorola", monospace;
 }
 
 .corte :first-child {
@@ -511,20 +536,17 @@ section {
   color: #00f0ff;
   width: 100%;
   border-radius: 0 0 5% 5%;
-  background: linear-gradient(
-    to right,
-    #000033,
-    #0044aa,
-    #0066cc,
-    #0044aa,
-    #000033
-  );
+  background: linear-gradient(to right,
+      #000033,
+      #0044aa,
+      #0066cc,
+      #0044aa,
+      #000033);
   height: 10vh;
   align-items: center;
 }
 
-.phone-buttons * {
-}
+.phone-buttons * {}
 
 .phone-buttons :first-child {
   margin-left: 3vw;
@@ -555,18 +577,7 @@ section {
   text-align: center;
 }
 
-#galeria {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  background-color: rgb(219, 77, 188);
-  
-}
 
-.galeria-fotos {
-  margin-left: 10vw;
-}
 
 
 
@@ -576,84 +587,181 @@ section {
 }
 
 #sobre {
-  background-color:  rgb(212, 50, 118) ;
+  background-color: rgb(212, 50, 118);
 }
 
-#contato {
-  background-color: #d9dddc;
-}
+
 
 /* --------------------- SECTION GALERIA ------------------------ */
-.galeria-fotos {
-    --d: 10s;
-    display: grid;
-    width: 35vw;
+
+#galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgb(219, 77, 188);
+
 }
 
-.galeria-fotos > img {
-    grid-area: 1/1;
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border: 10px solid #f2f2f2;
-    box-shadow: 0 0 4px #0007;
-    z-index: 2;
-    animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
+
+#galeria h1 {
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+}
+
+
+
+
+.galeria-fotos {
+  --d: 10s;
+  display: grid;
+  margin-left: 10vw;
+  width: 25vw;
+  align-self: center;
+  justify-self: center;
+
+}
+
+
+.galeria-fotos>img {
+  grid-area: 1/1;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  z-index: 2;
+  animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
 
 }
 
 .galeria-fotos img:last-child {
-    animation-name: slide, z-order-last;
+  animation-name: slide, z-order-last;
 }
 
-.galeria-fotos > img:nth-child(1) {
-    animation-delay: calc(0*var(--d));
-    --r: 0deg;
+.galeria-fotos>img:nth-child(1) {
+  animation-delay: calc(0*var(--d));
+  --r: 0deg;
 }
 
-.galeria-fotos > img:nth-child(2) {
-    animation-delay: calc(-0.2*var(--d));
-    --r: 5deg;
+.galeria-fotos>img:nth-child(2) {
+  animation-delay: calc(-0.2*var(--d));
+  --r: 5deg;
 }
 
 
-.galeria-fotos > img:nth-child(3) {
-    animation-delay: calc(-0.4*var(--d));
-    --r: -1deg;
+.galeria-fotos>img:nth-child(3) {
+  animation-delay: calc(-0.4*var(--d));
+  --r: -1deg;
 }
 
-.galeria-fotos > img:nth-child(4) {
-    animation-delay: calc(-0.6*var(--d));
-    --r: 6deg;
+.galeria-fotos>img:nth-child(4) {
+  animation-delay: calc(-0.6*var(--d));
+  --r: 6deg;
 }
 
-.galeria-fotos > img:nth-child(5) {
-    animation-delay: calc(-0.02*var(--d));
-    --r: -18deg;
+.galeria-fotos>img:nth-child(5) {
+  animation-delay: calc(-0.02*var(--d));
+  --r: -18deg;
 }
 
 @keyframes slide {
-    10% {
-        transform: translateX(120%) rotate(var(--r));
-    }
-    0%, 100%, 20% {
-        transform: translatex(0%) rotate(var(--r)) ;
-    }
+  10% {
+    transform: translateX(120%) rotate(var(--r));
+  }
+
+  0%,
+  100%,
+  20% {
+    transform: translatex(0%) rotate(var(--r));
+  }
 }
 
 @keyframes z-order {
-    10%, 20% {
-        z-index: 1;
-    }
-    80% {
-        z-index: 2;
-    }
+
+  10%,
+  20% {
+    z-index: 1;
+  }
+
+  80% {
+    z-index: 2;
+  }
 }
+
 @keyframes z-order-last {
-    10%, 20% {
-        z-index: 1;
-    }
-    90% {
-        z-index: 2;
-    }
+
+  10%,
+  20% {
+    z-index: 1;
+  }
+
+  90% {
+    z-index: 2;
+  }
+}
+
+
+
+/* ------------------------- SECTION CONTATO ----------------------------------- */
+
+
+
+
+#contato {
+  background-color: #d9dddc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 7vh;
+  grid-template-areas:
+    "iframe info "
+    "footer footer";
+  max-height: 90vh;
+  gap: 2vw;
+  
+}
+
+
+#contato>* {
+  
+}
+
+
+iframe {
+  border: solid 2px blue;
+  box-sizing: border-box;
+  align-self: center;
+  justify-self: center;
+  grid-area: iframe;
+  width: 100%;
+  padding-left: 2vw;
+}
+
+.container-info-contato {
+  display: flex;
+  flex-direction: column;
+ grid-area: info;
+ padding-right: 2vw;
+ justify-self: center;
+ align-self: center;
+ border: solid 2px yellow;
+ 
+}
+
+.container-info-contato>* {
+  border: solid 2px green;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+}
+
+footer {
+  grid-area: footer;
+  background-color: #3e4e4a;
 }
