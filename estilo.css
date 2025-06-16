@@ -590,7 +590,11 @@ section {
   background-color: rgb(212, 50, 118);
 }
 
-
+#sobre p {
+  height: 100%;
+  width: 50%;
+  border: solid 2px red;
+}
 
 /* --------------------- SECTION GALERIA ------------------------ */
 
@@ -707,6 +711,17 @@ section {
   }
 }
 
+
+
+/* ------------------------- SECTION SOBRE ----------------------------------- */
+
+#sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
 
 
 /* ------------------------- SECTION CONTATO ----------------------------------- */
