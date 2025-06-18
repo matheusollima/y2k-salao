@@ -720,9 +720,16 @@ section {
 
 #sobre {
   display: grid;
-  grid-template-columns: repeat(3, 10%);
-  
+  justify-content: start;
+  align-items: start;
+  grid-template-columns: repeat(4, 10%);
+  grid-template-rows: 10px 10px 10px 10px;
    background-color: rgb(212, 50, 118);
+}
+
+#sobre > * {
+
+  border: solid 2px red;
 }
 
 #sobre p {
