@@ -720,15 +720,69 @@ section {
 
 #sobre {
   display: grid;
-  grid-template-columns: repeat(3, 10%);
-  
+  grid-template-columns: repeat(3, calc(100% / 3));
+  grid-template-areas:
+  "titulo texto img1" 
+  "img2   texto img1";
    background-color: rgb(212, 50, 118);
+   height: 150vh;
+   width: 100%;
+   overflow: hidden;
+   padding-top: 10%;
+   padding-left: 10%;
+   padding-right: 10%;
+   position: relative;
+
+   
 }
 
-#sobre p {
-  
+#sobre :nth-child(1){
+  grid-area: titulo;
+  font-size: 40px;
+ 
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
+#sobre :nth-child(2) {
+  grid-area: texto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#sobre img {
+ max-height: auto;
+ width: 100%;
+ object-fit: cover;
+ border: solid 5px white;
+}
+
+#sobre :nth-child(3) {
+grid-area: img1;
+border-radius: 0 5% 0 5%;
+
+}
+
+#sobre :nth-child(4) {
+grid-area: img2;
+border-radius: 0 5% 0 5%;
+
+}
+
+#disket-layer{
+  position: absolute;
+  border: none !important;
+  width: 30% !important;
+  left: 60%;
+  top: 60%;
+}
 
 
 
