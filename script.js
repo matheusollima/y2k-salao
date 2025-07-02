@@ -251,4 +251,23 @@ function mostrarFeminino() {
   listar_servicos(servicosFemininos, servicos_container);
 }
 
+// Animação botão agendamento
 
+setInterval(()=>{
+  let botao_agendamento = document.querySelector(".botao-agendamento");
+  if(!botao_agendamento.classList.contains("ativo")){
+    botao_agendamento.classList.add("ativo");
+  } else {
+    botao_agendamento.classList.remove("ativo");
+  }
+}, 500);
+
+// Slide imagens section agendamento
+ let slide = document.querySelectorAll(".img-agendamento img");
+ let current = 0;
+
+ setInterval(()=>{
+  slide[current].classList.remove("ativo");
+  current = (current + 1) % slide.length;
+  slide[current].classList.add("ativo");
+ }, 10000);
