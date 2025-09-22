@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Y2K Salão</title>
+
   <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="estilo-mobile.css">
+  <link rel="stylesheet" href="estilo-tablet.css">
+  <script src = "menu-hamburguer.js" defer></script>
   <!--- FONTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +22,20 @@
 
 <body>
 
-  <!-- MENU ESQUERDO -->
+  <!-- MENU -->
 
-  <header class="header">
+  
+
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  
+    <!-- SEÇÃO 1 (TELA INTEIRA) -->
+    <section class="section" id="home">
+      <header class="header">
+    
     <nav class="menu-y2k">
-      <ul>
+      <img src="icons/icons8-menu-50.png" alt="" id = "menu-hamburguer" onclick='abrirMenu()'>
+      <ul id = "lista-menu">
         <li><a href="#home">Início</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#galeria">Galeria</a></li>
@@ -31,13 +44,8 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
+ 
   </header>
-
-
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main>
-    <!-- SEÇÃO 1 (TELA INTEIRA) -->
-    <section class="section" id="home">
       <img id='titulo-home' src="./imgs/y2k-text.png" alt="">
       <p id='subtitulo-home'>Transformando sua beleza desde o inicio do milênio</p>
     </section>
@@ -136,7 +144,7 @@
 
     <!--SECTION AGENDAMENTO -->
     <section class="section" id="agendamento">
-      <h1>O amanhã começa no seu estilo</h1>
+      <h1 id = texto-agendamento>O amanhã começa no seu estilo</h1>
       <div class="elementos-agenda">
         <div class="moldura" >
           <img src="imgs/agendamento/moldura02.png" alt="" draggable="false">
@@ -235,7 +243,7 @@
       </footer>
     </section>
 
-  </main>
+  
 
 
 

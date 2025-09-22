@@ -27,6 +27,7 @@
   box-sizing: border-box;
   font-family: "pixelada";
   scroll-behavior: smooth;
+ 
 }
 
 body {
@@ -34,14 +35,14 @@ body {
 }
 
 
-.header {
+header {
   position: fixed;
-  z-index: 99999;
+  /* z-index: 99999; */
   width: 70%;
- border-radius: 10% 10%;
+ /* border-radius: 10% 10%; */
   left: 50%;
   transform: translate(-50%);
-   border-radius: 100px;
+
 
 }
 
@@ -63,6 +64,10 @@ nav {
   height: 6vh;
   border-radius: 50px 50px 50px 50px;
   
+}
+
+#menu-hamburguer {
+  display: none;
 }
 
 nav ul {
@@ -133,6 +138,7 @@ nav a:hover {
   background-size: 100% 100%;
   animation: brilho-titanio 8s infinite linear;
   border-radius: 50px 50px 50px 50px;
+  
 }
 
 /* SEÇÕES */
