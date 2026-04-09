@@ -8,17 +8,12 @@
     <link rel="stylesheet" href="estilo-mobile.css" />
     <link rel="stylesheet" href="estilo-tablet.css" />
     <script src="menu-hamburguer.js" defer></script>
-    <!--- FONTES -->
-
-    <!-- ORBITRON -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- INTER -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,18 +38,14 @@
   </head>
 
   <body>
-    <!-- BOTÃO WHATSAPP -->
     <a href="https://wa.me/5511999999999" class="whatsapp-btn">
-      <img src="/imgs/home/icons8-whatsapp.svg" alt="WhatsApp" />
+      <img src="imgs/home/icons8-whatsapp.svg" alt="WhatsApp" />
     </a>
-
-    <!-- BOTÃO VOLTAR AO TOPO -->
 
     <a href="#" id="btn-topo">
       <span class="seta"></span>
     </a>
 
-    <!-- SEÇÃO 1 (TELA INTEIRA) -->
     <header class="header">
       <nav class="menu-y2k">
         <div id="img-menu-container">
@@ -75,17 +66,15 @@
       </nav>
       <div id="redes-sociais-header">
         <a href=""
-          ><img src="/imgs/icones-redes-sociais/instagram.png" alt=""
+          ><img src="imgs/icones-redes-sociais/instagram.png" alt=""
         /></a>
         <a href=""
-          ><img src="/imgs/icones-redes-sociais/facebook.png" alt=""
+          ><img src="imgs/icones-redes-sociais/facebook.png" alt=""
         /></a>
       </div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
-      <!-- SECTION HOME -->
       <section class="section" id="home">
         <ul id="lista-menu-hamburguer">
           <li><a href="#servicos">Serviços</a></li>
@@ -96,7 +85,7 @@
         </ul>
 
         <div id="apresentacao">
-          <img id="titulo-home" src="./imgs/y2k-salao-logo.png" alt="" />
+          <img id="titulo-home" src="imgs/y2k-salao-logo.png" alt="" />
           <p id="subtitulo-home">
             Transformando sua beleza desde o inicio do milênio
           </p>
@@ -104,7 +93,6 @@
         </div>
       </section>
 
-      <!-- SECTION SERVIÇOS -->
       <section class="section" id="servicos">
         <div class="container" id="servicos-container">
           <div>
@@ -117,71 +105,67 @@
               <li class="janela-servico" data-id="corte-cabelo">
                 <div class="title-bar">
                   <p>Corte de Cabelo</p>
-                  <img src="./imgs/minimize-window.png" alt="" />
-                  <img src="./imgs/maximize-window.png" alt="" />
-                  <img src="./imgs/close-window.png" alt="" />
+                  <img src="imgs/minimize-window.png" alt="" />
+                  <img src="imgs/maximize-window.png" alt="" />
+                  <img src="imgs/close-window.png" alt="" />
                 </div>
-                <img src="./imgs/corte-de-cabelo.webp" alt="" />
+                <img src="imgs/corte-de-cabelo.webp" alt="" />
               </li>
               <li class="janela-servico" data-id="coloracao">
                 <div class="title-bar">
                   <p>Coloração</p>
-                  <img src="./imgs/minimize-window.png" alt="" />
-                  <img src="./imgs/maximize-window.png" alt="" />
-                  <img src="./imgs/close-window.png" alt="" />
+                  <img src="imgs/minimize-window.png" alt="" />
+                  <img src="imgs/maximize-window.png" alt="" />
+                  <img src="imgs/close-window.png" alt="" />
                 </div>
-                <img src="./imgs/coloracao.jpg" alt="" />
+                <img src="imgs/coloracao.jpg" alt="" />
               </li>
               <li class="janela-servico" data-id="tratamentos-capilares">
                 <div class="title-bar">
                   <p>Tratamentos Capilares</p>
-                  <img src="./imgs/minimize-window.png" alt="" />
-                  <img src="./imgs/maximize-window.png" alt="" />
-                  <img src="./imgs/close-window.png" alt="" />
+                  <img src="imgs/minimize-window.png" alt="" />
+                  <img src="imgs/maximize-window.png" alt="" />
+                  <img src="imgs/close-window.png" alt="" />
                 </div>
-                <img src="./imgs/tratamentos-capilares.png" alt="" />
+                <img src="imgs/tratamentos-capilares.png" alt="" />
               </li>
               <li class="janela-servico" data-id="alisamentos">
                 <div class="title-bar">
                   <p>Alisamentos e Reduções de Volume</p>
-                  <img src="./imgs/minimize-window.png" alt="" />
-                  <img src="./imgs/maximize-window.png" alt="" />
-                  <img src="./imgs/close-window.png" alt="" />
+                  <img src="imgs/minimize-window.png" alt="" />
+                  <img src="imgs/maximize-window.png" alt="" />
+                  <img src="imgs/close-window.png" alt="" />
                 </div>
-                <img src="./imgs/Alisamentos.jpeg" alt="" />
+                <img src="imgs/Alisamentos.jpeg" alt="" />
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- JANELA MODAL -->
       <div id="overlay"></div>
       <div class="modal" id="janela-modal">
         <div class="title-bar-modal">
           <span>Detalhes do serviço</span>
 
           <div class="buttons">
-            <img src="./imgs/close-window.png" class="fechar" />
+            <img src="imgs/close-window.png" class="fechar" />
           </div>
         </div>
 
         <div class="conteudo" id="conteudo-modal">
           <div class="imagens-modal">
-            <!-- imagem dinâmica -->
             <div id="img-01-modal-container"><img id="img01" src="" /></div>
 
             <div id="img-02-modal-container">
-              <!-- celular -->
               <img
                 id="img02"
-                src="./imgs/flipper-phone-layer - Copia.png"
+                src="imgs/flipper-phone-layer - Copia.png"
                 draggable="false"
               />
             </div>
           </div>
 
-          <!-- tela celular com serviços -->
           <div id="phone-screen">
             <div class="barra-titulo"></div>
 
@@ -189,12 +173,11 @@
 
             <div class="phone-buttons">
               <div id="cortesFemininos" class="button" onclick="mostrarFeminino()">Feminino</div>
-              <span class="button">&#9776;</span>
+              <span class="button">☰</span>
               <div   id="cortesMasculinos" class="button" onclick="mostrarMasculino()">Masculino</div>
             </div>
           </div>
 
-          <!-- layer -->
           <img
             src="imgs/pixelated-layer.jpg"
             id="pixelated-layer"
@@ -203,7 +186,6 @@
         </div>
       </div>
 
-      <!-- SECTION GALERIA-->
       <section class="section" id="galeria">
         <div class="container">
           <h1>Galeria</h1>
@@ -224,7 +206,6 @@
         </div>
       </section>
 
-      <!--SECTION AGENDAMENTO -->
       <section class="section" id="agendamento">
         <div class="container" id="agendamento-container">
           <div>
@@ -233,16 +214,14 @@
           </div>
 
           <div id="agendamento-conteudo">
-            <!-- MOLDURA CONTAINER -->
             <div id="moldura">
               <img
-                src="/imgs/agendamento/img-agendamento01.webp"
+                src="imgs/agendamento/img-agendamento01.webp"
                 alt=""
                 class="ativo"
               />
             </div>
 
-            <!-- CTA AGENDA -->
             <div id="agenda">
               <div id="agenda-txt-container">
                 <h2>Transforme seu visual - reserve seu horário</h2>
@@ -270,13 +249,12 @@
         </div>
       </section>
 
-      <!---SECTION SOBRE -->
       <section class="section" id="sobre">
         <div class="container" id="sobre-container">
           <h1>Sobre</h1>
           <div id="sobre-conteudo-container">
             <div id="sobre-img-01">
-              <img src="/imgs/sobre/img-sobre-01.png" alt="" />
+              <img src="imgs/sobre/img-sobre-01.png" alt="" />
             </div>
             <div id="sobre-txt">
               <p>
@@ -289,36 +267,35 @@
               </p>
             </div>
             <div id="sobre-img-02">
-              <img src="/imgs/sobre/img-sobre-02.webp" alt="" />
+              <img src="imgs/sobre/img-sobre-02.webp" alt="" />
             </div>
           </div>
           <div id="y2k-espaço-container">
             <h1>Nosso espaço</h1>
             <div id="y2k-espaço-galeria">
               <div>
-                <img src="/imgs/Sobre/espaço/img01.png" alt="" />
+                <img src="imgs/Sobre/espaço/img01.png" alt="" />
               </div>
               <div>
-                <img src="/imgs/Sobre/espaço/img02.webp" alt="" />
+                <img src="imgs/Sobre/espaço/img02.webp" alt="" />
               </div>
               <div>
-                <img src="/imgs/sobre/espaço/img03.webp" alt="" />
+                <img src="imgs/sobre/espaço/img03.webp" alt="" />
               </div>
               <div>
-                <img src="/imgs/sobre/espaço/img04.webp" alt="" />
+                <img src="imgs/sobre/espaço/img04.webp" alt="" />
               </div>
               <div>
-                <img src="/imgs/sobre/espaço/img05.webp" alt="" />
+                <img src="imgs/sobre/espaço/img05.webp" alt="" />
               </div>
               <div>
-                <img src="/imgs/sobre/espaço/img06.webp" alt="" />
+                <img src="imgs/sobre/espaço/img06.webp" alt="" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SECTION CONTATO -->
       <section class="section" id="contato">
         <div class="container" id="contato-container">
           <div id="contato-conteudo-container">
@@ -329,7 +306,7 @@
                     <div class="contato-item">
                       <img
                         class="contato-icon"
-                        src="/imgs/Contato/icons/icons8-location-50.png"
+                        src="imgs/Contato/icons/icons8-location-50.png"
                         alt="Ícone de endereço"
                       />
                       <div>
@@ -343,7 +320,7 @@
                     <div class="contato-item">
                       <img
                         class="contato-icon"
-                        src="/imgs/Contato/icons/icons8-telefone-50.png"
+                        src="imgs/Contato/icons/icons8-telefone-50.png"
                         alt="Ícone de telefone"
                       />
                       <div>
@@ -354,7 +331,7 @@
                     <div class="contato-item">
                       <img
                         class="contato-icon"
-                        src="/imgs/Contato/icons/icons8-nova-mensagem-50.png"
+                        src="imgs/Contato/icons/icons8-nova-mensagem-50.png"
                         alt="Ícone de e-mail"
                       />
                       <div>
@@ -379,18 +356,18 @@
               </div>
               <div id="redes-sociais-container">
                 <a href=""
-                  ><img src="/imgs/icones-redes-sociais/instagram.png" alt=""
+                  ><img src="imgs/icones-redes-sociais/instagram.png" alt=""
                 /></a>
                 <a href=""
-                  ><img src="/imgs/icones-redes-sociais/facebook.png" alt=""
+                  ><img src="imgs/icones-redes-sociais/facebook.png" alt=""
                 /></a>
               </div>
             </div>
             <div id="mapa-container">
-              <img src="/imgs/Contato/img01.png" alt="" />
+              <img src="imgs/Contato/img01.png" alt="" />
 
               <div id="mapa-tela">
-                <iframe
+                   <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.32186343717!2d-46.67961155411308!3d-23.738055020142813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f007aca56ef%3A0xd2d48a13135f5f95!2sRua%20Aurora%20Boreal!5e0!3m2!1spt-BR!2sbr!4v1774730728924!5m2!1spt-BR!2sbr"
                   allowfullscreen=""
                   loading="lazy"
@@ -404,6 +381,5 @@
     </main>
   </body>
 
-  <!--FOOTER-->
   <footer></footer>
 </html>
