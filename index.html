@@ -1,252 +1,409 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Y2K Salão</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="estilo-mobile.css" />
+    <link rel="stylesheet" href="estilo-tablet.css" />
+    <script src="menu-hamburguer.js" defer></script>
+    <!--- FONTES -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Y2K Salão</title>
+    <!-- ORBITRON -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="estilo.css">
-  <link rel="stylesheet" href="estilo-mobile.css">
-  <link rel="stylesheet" href="estilo-tablet.css">
-  <script src = "menu-hamburguer.js" defer></script>
-  <!--- FONTE -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
-</head>
+    <!-- INTER -->
 
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- MENU -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
 
-  
+  <body>
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-btn">
+      <img src="/imgs/home/icons8-whatsapp.svg" alt="WhatsApp" />
+    </a>
 
+    <!-- BOTÃO VOLTAR AO TOPO -->
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  
+    <a href="#" id="btn-topo">
+      <span class="seta"></span>
+    </a>
+
     <!-- SEÇÃO 1 (TELA INTEIRA) -->
-    <section class="section" id="home">
-      <header class="header">
-    
-    <nav class="menu-y2k">
-      <img src="icons/icons8-menu-50.png" alt="" id = "menu-hamburguer" onclick='abrirMenu()'>
-      <ul id = "lista-menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#agendamento">Agendamento</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
- 
-  </header>
-      <img id='titulo-home' src="./imgs/y2k-text.png" alt="">
-      <p id='subtitulo-home'>Transformando sua beleza desde o inicio do milênio</p>
-    </section>
-
-    <!-- SECTION SERVIÇOS -->
-    <section class="section" id="servicos">
-      <h1>Nossos Serviços</h1>
-      <ul id="janelas-serviços">
-        <li class="janela-servico" data-id='corte-cabelo'>
-          <div class="title-bar">
-            <p>Corte de Cabelo</p>
-            <img src="./imgs/minimize-window.png" alt="">
-            <img src="./imgs/maximize-window.png" alt="">
-            <img src="./imgs/close-window.png" alt="">
-          </div>
-          <img src="./imgs/corte-de-cabelo.webp" alt="">
-        </li>
-        <li class="janela-servico" data-id='coloracao'>
-          <div class="title-bar">
-            <p>Coloração</p>
-            <img src="./imgs/minimize-window.png" alt="">
-            <img src="./imgs/maximize-window.png" alt="">
-            <img src="./imgs/close-window.png" alt="">
-          </div>
-          <img src="./imgs/coloracao.jpg" alt="">
-        </li>
-        <li class="janela-servico" data-id='tratamentos-capilares'>
-          <div class="title-bar">
-            <p>Tratamentos Capilares</p>
-            <img src="./imgs/minimize-window.png" alt="">
-            <img src="./imgs/maximize-window.png" alt="">
-            <img src="./imgs/close-window.png" alt="">
-          </div>
-          <img src="./imgs/tratamentos-capilares.png" alt="">
-        </li>
-        <li class="janela-servico" data-id='alisamentos'>
-          <div class="title-bar">
-            <p>Alisamentos e Reduções de Volume</p>
-            <img src="./imgs/minimize-window.png" alt="">
-            <img src="./imgs/maximize-window.png" alt="">
-            <img src="./imgs/close-window.png" alt="">
-          </div>
-          <img src="./imgs/Alisamentos.jpeg" alt="">
-        </li>
-      </ul>
-    </section>
-
-
-
-    <!-- JANELA MODAL -->
-    <div id="overlay"></div>
-    <div class="modal" id="janela-modal">
-      <div class="title-bar-modal">
-        <span>Detalhes do serviço</span>
-        <div class="buttons">
-
-          <img src="./imgs/close-window.png" alt="" class="fechar">
+    <header class="header">
+      <nav class="menu-y2k">
+        <div id="img-menu-container">
+          <img
+            src="icons/icons8-menu-50.png"
+            alt=""
+            id="menu-hamburguer"
+            onclick="abrirMenu()"
+          />
         </div>
+        <ul id="lista-menu-desktop">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div id="redes-sociais-header">
+        <a href=""
+          ><img src="/imgs/icones-redes-sociais/instagram.png" alt=""
+        /></a>
+        <a href=""
+          ><img src="/imgs/icones-redes-sociais/facebook.png" alt=""
+        /></a>
       </div>
-      <div class="conteudo">
+    </header>
 
-        <div class="imagens-modal">
-          <img id="img01" src="" alt="">
-          <img id="img02" src="./imgs/tela-serviços-removebg-preview.png" alt="" draggable="false">
-          <h2 id="titulo-servico">Cortes de cabelo</h2>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+      <!-- SECTION HOME -->
+      <section class="section" id="home">
+        <ul id="lista-menu-hamburguer">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
 
+        <div id="apresentacao">
+          <img id="titulo-home" src="./imgs/y2k-salao-logo.png" alt="" />
+          <p id="subtitulo-home">
+            Transformando sua beleza desde o inicio do milênio
+          </p>
+          <a href="#agendamento" class="btn-win95"> Agendar Serviço </a>
         </div>
-        <div id="phone-screen">
-          <div class="barra-titulo"></div>
-          <div class="servicos-container"></div>
-          <div class="phone-buttons">
-            <div class="button" id="cortesFemininos" onclick="mostrarFeminino()">Feminino</div>
-            <span class="button">&#9776;</span>
-            <div class="button" id="cortesMasculinos" onclick="mostrarMasculino()">Masculino</div>
-          </div>
-        </div>
-        <img src="imgs/pixelated-layer.jpg" alt="" id="pixelated-layer" draggable="false">
-      </div>
-    </div>
-    </div>
+      </section>
 
-    </div>
-
-
-    <!-- SECTION GALERIA-->
-    <section class="section" id="galeria">
-      <h1>Galeria</h1>
-      <img src="imgs/layers/camera.webp" id="camera-layer" alt="" draggable="false">
-      <div class="galeria-fotos">
-        <img src="imgs/fotos-galeria/foto01.jpg" alt="">
-        <img src="imgs/fotos-galeria/foto02.jpg" alt="">
-        <img src="imgs/fotos-galeria/foto03.jpg" alt="">
-        <img src="imgs/fotos-galeria/foto04.jpg" alt="">
-      </div>
-    </section>
-
-    <!--SECTION AGENDAMENTO -->
-    <section class="section" id="agendamento">
-      <h1 id = texto-agendamento>O amanhã começa no seu estilo</h1>
-      <div class="elementos-agenda">
-        <div class="moldura" >
-          <img src="imgs/agendamento/moldura02.png" alt="" draggable="false">
-          <div class="img-agendamento">
-            <img src="imgs/agendamento/img03.webp" alt="" class="ativo">
-            <img src="imgs/agendamento/img02.webp" alt="">
-          </div>
-        </div>
-        <div class="agenda">
+      <!-- SECTION SERVIÇOS -->
+      <section class="section" id="servicos">
+        <div class="container" id="servicos-container">
           <div>
-            <h2>Reset,</h2>
-            <h2>Reload,</h2>
-            <h2>Reinvente-se</h2>
+            <h1>Nossos Serviços</h1>
+            <p>Beleza, estilo e atitude em cada transformação</p>
           </div>
-          <a href="#" role="button" tabindex="0" onclick="event.preventDefault()" class="botao-agendamento ">
-            <p>Agende seu horário!</p>
-          </a>
-          <img src="imgs/layers/caderno.png" alt="" draggable="false">
-          <div class="paginas">
-            <div class="schedule">
-              <p>SEGUNDA-SEXTA 8:00 ás 19:00</p>
-              <p>SÁBADO 09:00 ás 16:00</p>
+
+          <div class="conteudo" id="servicos-container-conteudo">
+            <ul id="janelas-serviços">
+              <li class="janela-servico" data-id="corte-cabelo">
+                <div class="title-bar">
+                  <p>Corte de Cabelo</p>
+                  <img src="./imgs/minimize-window.png" alt="" />
+                  <img src="./imgs/maximize-window.png" alt="" />
+                  <img src="./imgs/close-window.png" alt="" />
+                </div>
+                <img src="./imgs/corte-de-cabelo.webp" alt="" />
+              </li>
+              <li class="janela-servico" data-id="coloracao">
+                <div class="title-bar">
+                  <p>Coloração</p>
+                  <img src="./imgs/minimize-window.png" alt="" />
+                  <img src="./imgs/maximize-window.png" alt="" />
+                  <img src="./imgs/close-window.png" alt="" />
+                </div>
+                <img src="./imgs/coloracao.jpg" alt="" />
+              </li>
+              <li class="janela-servico" data-id="tratamentos-capilares">
+                <div class="title-bar">
+                  <p>Tratamentos Capilares</p>
+                  <img src="./imgs/minimize-window.png" alt="" />
+                  <img src="./imgs/maximize-window.png" alt="" />
+                  <img src="./imgs/close-window.png" alt="" />
+                </div>
+                <img src="./imgs/tratamentos-capilares.png" alt="" />
+              </li>
+              <li class="janela-servico" data-id="alisamentos">
+                <div class="title-bar">
+                  <p>Alisamentos e Reduções de Volume</p>
+                  <img src="./imgs/minimize-window.png" alt="" />
+                  <img src="./imgs/maximize-window.png" alt="" />
+                  <img src="./imgs/close-window.png" alt="" />
+                </div>
+                <img src="./imgs/Alisamentos.jpeg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- JANELA MODAL -->
+      <div id="overlay"></div>
+      <div class="modal" id="janela-modal">
+        <div class="title-bar-modal">
+          <span>Detalhes do serviço</span>
+
+          <div class="buttons">
+            <img src="./imgs/close-window.png" class="fechar" />
+          </div>
+        </div>
+
+        <div class="conteudo" id="conteudo-modal">
+          <div class="imagens-modal">
+            <!-- imagem dinâmica -->
+            <div id="img-01-modal-container"><img id="img01" src="" /></div>
+
+            <div id="img-02-modal-container">
+              <!-- celular -->
+              <img
+                id="img02"
+                src="./imgs/flipper-phone-layer - Copia.png"
+                draggable="false"
+              />
+            </div>
+          </div>
+
+          <!-- tela celular com serviços -->
+          <div id="phone-screen">
+            <div class="barra-titulo"></div>
+
+            <div class="servicos-container"></div>
+
+            <div class="phone-buttons">
+              <div id="cortesFemininos" class="button" onclick="mostrarFeminino()">Feminino</div>
+              <span class="button">&#9776;</span>
+              <div   id="cortesMasculinos" class="button" onclick="mostrarMasculino()">Masculino</div>
+            </div>
+          </div>
+
+          <!-- layer -->
+          <img
+            src="imgs/pixelated-layer.jpg"
+            id="pixelated-layer"
+            draggable="false"
+          />
+        </div>
+      </div>
+
+      <!-- SECTION GALERIA-->
+      <section class="section" id="galeria">
+        <div class="container">
+          <h1>Galeria</h1>
+          <div class="conteudo">
+            <img
+              src="imgs/layers/camera.webp"
+              id="camera-layer"
+              alt=""
+              draggable="false"
+            />
+            <div class="galeria-fotos">
+              <img src="imgs/fotos-galeria/foto01.jpg" alt="" />
+              <img src="imgs/fotos-galeria/foto02.jpg" alt="" />
+              <img src="imgs/fotos-galeria/foto03.jpg" alt="" />
+              <img src="imgs/fotos-galeria/foto04.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--SECTION AGENDAMENTO -->
+      <section class="section" id="agendamento">
+        <div class="container" id="agendamento-container">
+          <div>
+            <h1 id="texto-agendamento">O amanhã começa no seu estilo</h1>
+            <p>Reset, Reload, Reinvente-se</p>
+          </div>
+
+          <div id="agendamento-conteudo">
+            <!-- MOLDURA CONTAINER -->
+            <div id="moldura">
+              <img
+                src="/imgs/agendamento/img-agendamento01.webp"
+                alt=""
+                class="ativo"
+              />
             </div>
 
+            <!-- CTA AGENDA -->
+            <div id="agenda">
+              <div id="agenda-txt-container">
+                <h2>Transforme seu visual - reserve seu horário</h2>
+                <br />
+                <p>
+                  Horários de atendimento: <br />
+                  Segunda a Sexta: 09:00 - 19:00 <br />
+                  Sábado: 09:00 - 16:00 <br />
+                  Domingo: Fechado
+                </p>
+              </div>
+              <div id="agenda-botao-container">
+                <a
+                  href="#"
+                  role="button"
+                  tabindex="0"
+                  onclick="event.preventDefault()"
+                  class="botao-agendamento"
+                >
+                  <p>Reserve agora</p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-
-    </section>
-
-    <!---SECTION SOBRE -->
-    <section class="section" id="sobre">
-      <h1>Sobre nós</h1>
-      <p>O Y2K Salão nasceu de um desejo simples: trazer de volta o brilho que os anos 2000 deixaram na alma de uma
-        geração. Não é só sobre cabelo. É sobre atitude. É sobre se olhar no espelho e enxergar coragem, estilo e uma
-        pitada de nostalgia com glitter.
-
-        Inspirado pelas cores vibrantes, pela rebeldia fashion e pela liberdade que marcaram o comecinho do milênio, o
-        Y2K Salão mistura o retrô com o futurista, criando um espaço onde você pode ser exatamente quem quiser — com
-        muito brilho e zero julgamento.
-
-        Dos tons pastel aos neons, das franjas desfiadas aos cabelos platinados, cada detalhe aqui é pensado para
-        celebrar a sua autenticidade. Nosso salão é um portal: você entra com a sua versão atual e sai com uma versão
-        ainda mais poderosa de si.
-
-        📀 Y2K não é só um nome — é uma era. E ela vive aqui.</p>
-      <img src="imgs/sobre/foto-salao.webp" alt="">
-      <img src="imgs/sobre/foto-salao-corte.webp" alt="">
-      <img src="imgs/layers/vhs.webp" id="vhs-layer" alt="" draggable="false">
-    </section>
-
-
-    <!-- SECTION CONTATO -->
-    <section class="section" id="contato">
-      <div class="iframe-container">
-        <img src="imgs/layers/monitor-crt.png" draggable="false" alt="">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.7362385797583!2d-46.67974882548031!3d-23.73805486810587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f007aca56ef%3A0xd2d48a13135f5f95!2sRua%20Aurora%20Boreal!5e0!3m2!1spt-BR!2sbr!4v1749742023535!5m2!1spt-BR!2sbr"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="overlay-iframe"><a href="https://maps.app.goo.gl/nkz1Qk4VRJxTF4MGA" target="_blank"></a></div>
-      </div>
-
-      <div class="container-info-contato">
-        <div class="endereco">
-          <h1>Endereço</h1>
-          <p>Rua Aurora Boreal, 275 – Bela Vista, São Paulo – SP</p>
+      <!---SECTION SOBRE -->
+      <section class="section" id="sobre">
+        <div class="container" id="sobre-container">
+          <h1>Sobre</h1>
+          <div id="sobre-conteudo-container">
+            <div id="sobre-img-01">
+              <img src="/imgs/sobre/img-sobre-01.png" alt="" />
+            </div>
+            <div id="sobre-txt">
+              <p>
+                No Y2K Salão, acreditamos que cada pessoa tem um estilo único
+                que merece ser valorizado. Nosso espaço foi criado para unir
+                técnica, criatividade e as últimas tendências, oferecendo uma
+                experiência completa em cuidados com o cabelo. Aqui, mais do que
+                transformar visual, buscamos elevar sua autoestima e fazer você
+                se sentir confiante em cada detalhe.
+              </p>
+            </div>
+            <div id="sobre-img-02">
+              <img src="/imgs/sobre/img-sobre-02.webp" alt="" />
+            </div>
+          </div>
+          <div id="y2k-espaço-container">
+            <h1>Nosso espaço</h1>
+            <div id="y2k-espaço-galeria">
+              <div>
+                <img src="/imgs/Sobre/espaço/img01.png" alt="" />
+              </div>
+              <div>
+                <img src="/imgs/Sobre/espaço/img02.webp" alt="" />
+              </div>
+              <div>
+                <img src="/imgs/sobre/espaço/img03.webp" alt="" />
+              </div>
+              <div>
+                <img src="/imgs/sobre/espaço/img04.webp" alt="" />
+              </div>
+              <div>
+                <img src="/imgs/sobre/espaço/img05.webp" alt="" />
+              </div>
+              <div>
+                <img src="/imgs/sobre/espaço/img06.webp" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="telefone">
-          <h1>Telefone</h1>
-          <p>(11) 90000-0000</p>
+      </section>
+
+      <!-- SECTION CONTATO -->
+      <section class="section" id="contato">
+        <div class="container" id="contato-container">
+          <div id="contato-conteudo-container">
+            <div id="informacoes-container">
+              <div id="informacoes-txt-container">
+                <div id="texto-informacoes-container">
+                  <div>
+                    <div class="contato-item">
+                      <img
+                        class="contato-icon"
+                        src="/imgs/Contato/icons/icons8-location-50.png"
+                        alt="Ícone de endereço"
+                      />
+                      <div>
+                        <h1>Endereço:</h1>
+                        <p>
+                          Rua Aurora Boreal, 275 – Bela Vista,<br />
+                          São Paulo – SP
+                        </p>
+                      </div>
+                    </div>
+                    <div class="contato-item">
+                      <img
+                        class="contato-icon"
+                        src="/imgs/Contato/icons/icons8-telefone-50.png"
+                        alt="Ícone de telefone"
+                      />
+                      <div>
+                        <h1>Telefone:</h1>
+                        <p>(11) 90000-0000</p>
+                      </div>
+                    </div>
+                    <div class="contato-item">
+                      <img
+                        class="contato-icon"
+                        src="/imgs/Contato/icons/icons8-nova-mensagem-50.png"
+                        alt="Ícone de e-mail"
+                      />
+                      <div>
+                        <h1>Email:</h1>
+                        <p>contato.y2ksalao@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="texto-horarios-container">
+                  <div>
+                    <h1>Horários:</h1>
+                    <p>
+                      Segunda a Sexta: <br />09:00 - 19:00<br />
+                      Sábado: <br />
+                      09:00 - 16:00<br />
+                      Domingo:<br />
+                      Fechado
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="redes-sociais-container">
+                <a href=""
+                  ><img src="/imgs/icones-redes-sociais/instagram.png" alt=""
+                /></a>
+                <a href=""
+                  ><img src="/imgs/icones-redes-sociais/facebook.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div id="mapa-container">
+              <img src="/imgs/Contato/img01.png" alt="" />
+
+              <div id="mapa-tela">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.32186343717!2d-46.67961155411308!3d-23.738055020142813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f007aca56ef%3A0xd2d48a13135f5f95!2sRua%20Aurora%20Boreal!5e0!3m2!1spt-BR!2sbr!4v1774730728924!5m2!1spt-BR!2sbr"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="email">
-          <h1>Email</h1>
-          <p>contato.y2ksalao@gmail.com</p>
-        </div>
-        <div class="redes-sociais">
-          <h1></h1>
-        </div>
-      </div>
+      </section>
+    </main>
+  </body>
 
-      <!--- RODAPÉ -->
-      <footer>
-        <p>Todos os direitos reservados | Y2K Salão</p>
-        <div class="redes-sociais">
-          <a href="google.com"><img src="imgs/icones-redes-sociais/whatsapp.png" alt=""></a>
-          <img src="imgs/icones-redes-sociais/facebook.png" alt="">
-          <img src="imgs/icones-redes-sociais/instagram.png" alt="">
-          <img src="imgs/icones-redes-sociais/tiktok.png" alt="">
-          <img src="imgs/icones-redes-sociais/whatsapp05.png" alt="">
-          <img src="imgs/icones-redes-sociais/whatsapp06.png" alt="">
-
-
-        </div>
-      </footer>
-    </section>
-
-  
-
-
-
-</body>
-
+  <!--FOOTER-->
+  <footer></footer>
 </html>

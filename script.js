@@ -1,3 +1,17 @@
+// BOTÃO VOLTAR AO TOPO
+
+const btn = document.getElementById("btn-topo");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > window.innerHeight * 0.8) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+});
+
+// Animação subtítulo home
+
 setTimeout(() => {
   let subtitulo = document.getElementById("subtitulo-home");
   subtitulo.style.opacity = 1;
@@ -16,8 +30,8 @@ let fechar = document.querySelector(".fechar");
 let body = document.querySelector("body");
 let servicos_container = document.querySelector(".servicos-container");
 let barra_titulo = document.querySelector(".barra-titulo");
-let titulo_servico = document.getElementById("titulo-servico");
-let img_servico = document.getElementById('img01');
+// let titulo_servico = document.getElementById("titulo-servico");
+let img_servico = document.getElementById("img01");
 let tituloMasculino;
 let tituloFeminino;
 let servicosMasculinos;
@@ -29,6 +43,7 @@ janelas_servico.forEach((botao) => {
     // Abrir a janela modal
     modal.classList.add("expandir");
     overlay.classList.add("active");
+    //bloqueia o scroll da página quando a janela modal estiver aberta
     document.body.style.overflowY = "hidden";
 
     // Evento clique overlay - para fechar a janela modal ao clicar no overlay
@@ -36,27 +51,30 @@ janelas_servico.forEach((botao) => {
       overlay.addEventListener("click", () => {
         modal.classList.remove("expandir");
         overlay.classList.remove("active");
+        // limpa o conteúdo da janela modal ao fechá-la
         servicos_container.innerHTML = "";
         barra_titulo.innerHTML = "";
         tituloMasculino = "";
         tituloFeminino = "";
         servicosMasculinos = "";
         servicosFemininos = "";
+        // desbloqueia o scroll da página quando a janela modal for fechada
         document.body.style.overflowY = "visible";
       });
     }
 
-    // identificar o botão clicado
+    // identificar o serviço clicado
     const botaoClicado = evento.currentTarget;
     const data_id_botao = botaoClicado.getAttribute("data-id");
-    console.log("Botão clicado", data_id_botao);
+    console.log("O botão clicado foi ------------>", data_id_botao);
 
     switch (data_id_botao) {
       case "corte-cabelo":
         tituloMasculino = "Cortes Masculinos";
         tituloFeminino = "Cortes Femininos";
+
         img_servico.src = "./imgs/imagens modal/corte-cabelo-modal.jpg";
-        titulo_servico.innerText = "Cortes de cabelo ";
+        // titulo_servico.innerText = "Cortes de cabelo ";
         servicosMasculinos = [
           { nome: "Fade", preco: "R$ 30" },
           { nome: "Moicano", preco: "R$ 30" },
@@ -71,6 +89,7 @@ janelas_servico.forEach((botao) => {
           { nome: "Corte em camadas", preco: "R$ 30" },
           { nome: "Franja cortininha", preco: "R$ 30" },
         ];
+
         mostrarFeminino();
 
         break;
@@ -79,7 +98,7 @@ janelas_servico.forEach((botao) => {
         tituloFeminino = "Coloração - feminino";
         tituloMasculino = "Coloração - masculino";
         img_servico.src = "./imgs/imagens modal/coloracao-modal.jpg";
-        titulo_servico.innerText = "Coloração";
+        // titulo_servico.innerText = "Coloração";
         servicosFemininos = [
           { nome: "Coloração Global", preco: "R$ 180,00" },
           { nome: "Mechas", preco: "R$ 280,00" },
@@ -113,7 +132,7 @@ janelas_servico.forEach((botao) => {
         tituloFeminino = "Tratamentos - feminino";
         tituloMasculino = "Tratamentos - masculino";
         img_servico.src = "./imgs/imagens modal/tratamento-capilar-modal.jpg";
-        titulo_servico.innerText = "Tratamentos capilares";
+        // titulo_servico.innerText = "Tratamentos capilares";
         servicosFemininos = [
           { nome: "Hidratação Profunda", preco: "R$ 90,00" },
           { nome: "Reconstrução Capilar", preco: "R$ 120,00" },
@@ -124,7 +143,7 @@ janelas_servico.forEach((botao) => {
           { nome: "Alisamento / Escova Progressiva", preco: "R$ 300,00" },
           { nome: "Plástica dos Fios", preco: "R$ 280,00" },
           { nome: "Terapia Capilar", preco: "R$ 130,00" },
-          { nome: "Cronograma Capilar", preco: "R$ 350,00" }
+          { nome: "Cronograma Capilar", preco: "R$ 350,00" },
         ];
 
         servicosMasculinos = [
@@ -137,7 +156,7 @@ janelas_servico.forEach((botao) => {
           { nome: "Relaxamento Capilar", preco: "R$ 130,00" },
           { nome: "Corte Terapêutico", preco: "R$ 60,00" },
           { nome: "Peeling Capilar", preco: "R$ 100,00" },
-          { nome: "Barba e Cabelo - Hidratação Conjunta", preco: "R$ 110,00" }
+          { nome: "Barba e Cabelo - Hidratação Conjunta", preco: "R$ 110,00" },
         ];
         mostrarFeminino();
         break;
@@ -146,7 +165,7 @@ janelas_servico.forEach((botao) => {
         tituloFeminino = "Tratamentos - feminino";
         tituloMasculino = "Tratamentos - masculino";
         img_servico.src = "./imgs/imagens modal/alisamento-modal.jpg";
-        titulo_servico.innerText = "Alisamentos e reduções de volume";
+        // titulo_servico.innerText = "Alisamentos e reduções de volume";
         servicosFemininos = [
           { nome: "Escova Progressiva", preco: "R$ 300,00" },
           { nome: "Botox Capilar", preco: "R$ 200,00" },
@@ -157,7 +176,7 @@ janelas_servico.forEach((botao) => {
           { nome: "Escova de Ácido Hialurônico", preco: "R$ 250,00" },
           { nome: "Escova de Carbocisteína", preco: "R$ 240,00" },
           { nome: "Nanoplastia", preco: "R$ 350,00" },
-          { nome: "Taninoplastia", preco: "R$ 320,00" }
+          { nome: "Taninoplastia", preco: "R$ 320,00" },
         ];
         servicosMasculinos = [
           { nome: "Relaxamento Capilar Masculino", preco: "R$ 130,00" },
@@ -169,7 +188,7 @@ janelas_servico.forEach((botao) => {
           { nome: "Defrisagem", preco: "R$ 120,00" },
           { nome: "Redução de Volume com Queratina", preco: "R$ 140,00" },
           { nome: "Nanoplastia", preco: "R$ 250,00" },
-          { nome: "Alisamento Temporário", preco: "R$ 100,00" }
+          { nome: "Alisamento Temporário", preco: "R$ 100,00" },
         ];
         mostrarFeminino();
         break;
@@ -230,9 +249,6 @@ function listar_servicos(lista_servicos, servicos_container) {
   // document.querySelectorAll(".div-cor02").forEach((el) => {
   //   el.style.height = `calc(${phone_screen_altura}/${total})`;
   // });
-
-
-  
 }
 
 function mostrarMasculino() {
@@ -244,18 +260,22 @@ function mostrarMasculino() {
 }
 
 function mostrarFeminino() {
+   
   servicos_container.innerHTML = "";
-  botaoFeminino.style.color = "#DA70D6 ";
-  botaoMasculino.style.color = "#00f0ff";
-  barra_titulo.innerHTML = `<p>${tituloFeminino}</p>`;
+   barra_titulo.innerHTML = `<p>${tituloFeminino}</p>`;
   listar_servicos(servicosFemininos, servicos_container);
+   botaoFeminino.style.color = "#DA70D6 ";
+  botaoMasculino.style.color = "#00f0ff";
+   
+ 
+ 
 }
 
 // Animação botão agendamento
 
-setInterval(()=>{
+setInterval(() => {
   let botao_agendamento = document.querySelector(".botao-agendamento");
-  if(!botao_agendamento.classList.contains("ativo")){
+  if (!botao_agendamento.classList.contains("ativo")) {
     botao_agendamento.classList.add("ativo");
   } else {
     botao_agendamento.classList.remove("ativo");
@@ -263,11 +283,11 @@ setInterval(()=>{
 }, 500);
 
 // Slide imagens section agendamento
- let slide = document.querySelectorAll(".img-agendamento img");
- let current = 0;
+let slide = document.querySelectorAll(".img-agendamento img");
+let current = 0;
 
- setInterval(()=>{
+setInterval(() => {
   slide[current].classList.remove("ativo");
   current = (current + 1) % slide.length;
   slide[current].classList.add("ativo");
- }, 10000);
+}, 10000);

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Container Centralizado</title>
+
+  <style>
+    /* RESET */
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      background: #111;
+      font-family: Arial, sans-serif;
+    }
+
+    /* SECTION */
+    .wrapper{
+      width: 100%;
+      padding: 40px 0; /* só vertical */
+    }
+
+    /* 🔥 BLOCO CENTRALIZADO */
+    .bloco{
+      width: 100%;
+      max-width: 1200px; /* trava o tamanho */
+      margin: 0 auto;    /* centraliza */
+
+      background: orange;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .bloco p{
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="wrapper">
+    <div class="bloco">
+      <h1>Conteúdo Centralizado</h1>
+      <p>Redimensione a tela e veja as margens crescerem 👀</p>
+    </div>
+  </section>
+
+</body>
+</html>
