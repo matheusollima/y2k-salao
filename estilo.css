@@ -633,7 +633,6 @@ section {
 /* ---------------------------------------- TELA DO CELULAR ---------------------------------------- */
 
 #phone-screen {
-
 }
 
 /* camada pixel */
@@ -679,7 +678,6 @@ section {
   flex-direction: column;
   border-radius: 30px;
   z-index: 999999999999999999999999;
-
 }
 
 #pixelated-layer {
@@ -744,7 +742,7 @@ section {
 .div-cor01 {
   background-color: #d9dddc;
   display: flex;
- max-width: 200px;
+  max-width: 200px;
   height: 70.1312px;
   justify-content: space-between;
   align-items: center;
@@ -757,19 +755,16 @@ section {
   align-items: center;
   justify-content: space-between;
   max-width: 200px;
-  ;
   border: solid 6px yellow;
   box-sizing: border-box;
 }
 
 .div-cor01 p {
   font-size: 20px !important;
- 
 }
 
 .div-cor02 p {
   font-size: 20px !important;
- 
 }
 
 .div-cor01 :nth-child(1),
@@ -856,7 +851,7 @@ section {
 .phone-buttons :nth-child(3) {
   margin-right: 3vw;
   z-index: 99999;
-   border: solid 3px red;
+  border: solid 3px red;
 }
 
 .button {
@@ -1500,9 +1495,23 @@ section {
     padding: 40px 40px;
   }
 
+  header {
+    justify-content: start;
+  }
+
+ 
   /* NAV */
+
   nav ul {
     gap: 20px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  #redes-sociais-header {
+   right: 10px;
   }
 
   /* HOME */
