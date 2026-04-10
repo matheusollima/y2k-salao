@@ -50,8 +50,8 @@ p {
   bottom: 20px; /* distância do fundo */
   left: 20px; /* distância da esquerda */
 
-  width: 80px;
-  height: 80px;
+width: clamp(60px, 2.8vw + 35px, 150px);
+height: clamp(60px, 2.8vw + 35px, 150px);
 
   background-color: #fff;
   border-radius: 50%;
@@ -66,8 +66,8 @@ p {
 }
 
 .whatsapp-btn img {
-  width: 40px;
-  height: 40px;
+width: clamp(30px, 1.8vw + 20px, 75px);
+height: clamp(30px, 1.8vw + 20px, 75px);
 }
 
 /* 🔥 EFEITO PULSANTE */
@@ -331,7 +331,7 @@ section {
   align-self: center;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: clamp(7px, calc(2.0625vw + 0.4px), 40px);
 }
 
 /* Animação texto do titulo do salão*/
@@ -1499,7 +1499,6 @@ section {
     justify-content: start;
   }
 
- 
   /* NAV */
 
   nav ul {
@@ -1511,7 +1510,7 @@ section {
   }
 
   #redes-sociais-header {
-   right: 10px;
+    right: 10px;
   }
 
   /* HOME */
