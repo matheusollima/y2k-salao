@@ -1493,6 +1493,13 @@ section {
 
 /* ================= TABLET ================= */
 @media (max-width: 1024px) {
+  
+  
+  body {
+   overflow-x: hidden;
+}
+
+
   section {
     padding: 40px 40px;
   }
