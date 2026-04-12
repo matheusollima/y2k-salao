@@ -146,7 +146,7 @@
       <div id="overlay"></div>
       <div class="modal" id="janela-modal">
         <div class="title-bar-modal">
-          <span>Detalhes do serviço</span>
+          <span id="title-barra-modal">Detalhes do serviço</span>
 
           <div class="buttons">
             <img src="imgs/close-window.png" class="fechar" />
@@ -155,8 +155,9 @@
 
         <div class="conteudo" id="conteudo-modal">
           <div class="imagens-modal">
-            <div id="img-01-modal-container"><img id="img01" src="" /></div>
-
+            <div id="img-01-modal-container">
+              <img id="img01" src="" />
+            </div>
             <div id="img-02-modal-container">
               <img
                 id="img02"
@@ -172,9 +173,21 @@
             <div class="servicos-container"></div>
 
             <div class="phone-buttons">
-              <div id="cortesFemininos" class="button" onclick="mostrarFeminino()">Feminino</div>
+              <div
+                id="cortesFemininos"
+                class="button"
+                onclick="mostrarFeminino()"
+              >
+                Feminino
+              </div>
               <span class="button">☰</span>
-              <div   id="cortesMasculinos" class="button" onclick="mostrarMasculino()">Masculino</div>
+              <div
+                id="cortesMasculinos"
+                class="button"
+                onclick="mostrarMasculino()"
+              >
+                Masculino
+              </div>
             </div>
           </div>
 
@@ -188,7 +201,11 @@
 
       <section class="section" id="galeria">
         <div class="container">
-          <h1>Galeria</h1>
+          <div>
+            <h1>Galeria</h1>
+            <p>Estética 2000 ativada</p>
+          </div>
+
           <div class="conteudo">
             <img
               src="imgs/layers/camera.webp"
@@ -367,7 +384,7 @@
               <img src="imgs/Contato/img01.png" alt="" />
 
               <div id="mapa-tela">
-                   <iframe
+                <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.32186343717!2d-46.67961155411308!3d-23.738055020142813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f007aca56ef%3A0xd2d48a13135f5f95!2sRua%20Aurora%20Boreal!5e0!3m2!1spt-BR!2sbr!4v1774730728924!5m2!1spt-BR!2sbr"
                   allowfullscreen=""
                   loading="lazy"

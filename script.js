@@ -66,8 +66,9 @@ janelas_servico.forEach((botao) => {
     // identificar o serviço clicado
     const botaoClicado = evento.currentTarget;
     const data_id_botao = botaoClicado.getAttribute("data-id");
+    let = document.getElementById("title-barra-modal").innerText = botaoClicado.innerText;
     console.log("O botão clicado foi ------------>", data_id_botao);
-
+    
     switch (data_id_botao) {
       case "corte-cabelo":
         tituloMasculino = "Cortes Masculinos";
