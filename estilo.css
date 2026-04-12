@@ -41,6 +41,7 @@ h2 {
 
 p {
   font-family: inter, sans-serif;
+   font-size: 24px;
 }
 
 /* ----------------------- BOTÃO WHATSAPP FIXO ------------------------- */
@@ -479,7 +480,7 @@ section {
 
 .title-bar {
   position: absolute;
-  height: 20px;
+  height: 30px;
   width: 100%;
   background-color: rgb(255, 0, 255);
   display: grid;
@@ -501,6 +502,10 @@ section {
   width: auto;
   user-select: none;
   pointer-events: none;
+}
+
+#alisamentos .title-bar p {
+  font-size: 16px;  
 }
 
 /* ---------------------------------------- JANELAS MODAL ----------------------------------------*/
@@ -1038,7 +1043,7 @@ section {
 }
 
 #moldura img {
-  /* width: clamp(350px, 27vw, 600px); */
+  
   width: clamp(340px, calc(46.94vw - 301px), 600px);
 
   object-fit: contain;
@@ -1169,7 +1174,7 @@ section {
 
 #sobre {
   text-align: center;
-  background-color: #735668;
+  background-color: #ff56be;
 }
 
 #sobre-container {
@@ -1335,6 +1340,10 @@ section {
   z-index: 2;
 }
 
+#monitor-map {
+  pointer-events: none;
+}
+
 /* ÁREA DA TELA DO MONITOR */
 #mapa-tela {
   position: absolute;
@@ -1344,7 +1353,7 @@ section {
   height: 66%;
   overflow: hidden;
   border-radius: 6px;
-
+ 
   z-index: 1; /* base */
 }
 
@@ -1600,6 +1609,7 @@ section {
   #agendamento-conteudo {
     flex-direction: column;
     gap: 30px;
+    padding-top: 20px;
   }
 
   #agenda > * {
@@ -1718,6 +1728,20 @@ section {
   #agendamento-conteudo {
     padding: 16px;
     border-radius: 20px;
+    gap: 0px;
+  }
+
+  #moldura {
+    /* min-width: 32px; */
+  }
+
+  #moldura img {
+    min-width: 32px;
+  }
+
+
+  #agenda {
+    padding: 0;
   }
 
   .botao-agendamento {

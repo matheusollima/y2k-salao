@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Y2K Salão</title>
-    <link rel="stylesheet" href="estilo.css" />
-    <link rel="stylesheet" href="estilo-mobile.css" />
-    <link rel="stylesheet" href="estilo-tablet.css" />
-    <script src="menu-hamburguer.js" defer></script>
+    <link rel="stylesheet" href="estilo.css?v=1.0.1" />
+    <link rel="stylesheet" href="estilo-mobile.css?v=1.0.1" />
+    <link rel="stylesheet" href="estilo-tablet.css?v=1.0.1" />
+    <script src="menu-hamburguer.js?v=1.0.1" defer></script>
+    <script src="script.js?v=1.0.1" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,7 +35,6 @@
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -66,10 +66,16 @@
       </nav>
       <div id="redes-sociais-header">
         <a href=""
-          ><img src="imgs/icones-redes-sociais/instagram.png" alt=""
+          ><img
+            src="imgs/icones-redes-sociais/instagram.png"
+            alt="Instagram - Y2K Salão"
+            title="instagram.com/y2ksalao"
         /></a>
         <a href=""
-          ><img src="imgs/icones-redes-sociais/facebook.png" alt=""
+          ><img
+            src="imgs/icones-redes-sociais/facebook.png"
+            alt="Facebook - Y2K Salão"
+            title="facebook.com/y2ksalao"
         /></a>
       </div>
     </header>
@@ -129,7 +135,7 @@
                 </div>
                 <img src="imgs/tratamentos-capilares.png" alt="" />
               </li>
-              <li class="janela-servico" data-id="alisamentos">
+              <li class="janela-servico" data-id="alisamentos" id="alisamentos">
                 <div class="title-bar">
                   <p>Alisamentos e Reduções de Volume</p>
                   <img src="imgs/minimize-window.png" alt="" />
@@ -381,7 +387,7 @@
               </div>
             </div>
             <div id="mapa-container">
-              <img src="imgs/Contato/img01.png" alt="" />
+              <img src="imgs/Contato/img01.png" alt="" id="monitor-map" />
 
               <div id="mapa-tela">
                 <iframe
