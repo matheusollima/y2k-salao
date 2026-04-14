@@ -15,8 +15,9 @@ window.addEventListener("scroll", () => {
 // Altura home screen
 
 let homeScreen = document.getElementById("home");
-let alturaHome = homeScreen.offsetHeight;
-homeScreen.style.height = "calc(100dvh - " + alturaHome + "px)";
+let alturaHeader = document.getElementsByClassName("header")[0].offsetHeight;
+console.log("altura header", alturaHeader);
+homeScreen.style.minHeight = " calc(100dvh - " + alturaHeader + "px)";
 
 
 
