@@ -7,11 +7,15 @@ body {
    overflow-x: hidden;
 }
 
+/* Exibir menu hamburguer */
 
    #menu-hamburguer {
       display: block;
       
    }
+
+
+   
 
    #lista-menu-desktop {
       display: none;
@@ -26,7 +30,6 @@ body {
       padding: 0;
       overflow: hidden;
       transition: height 0.5s ease;
-      top: 11vh;
       position: absolute;
       z-index: 999999;
       display: block;

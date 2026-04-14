@@ -323,7 +323,7 @@ section {
   justify-content: center;
   top: 0;
   z-index: -2;
-  min-height: calc(100dvh - 15dvh) !important;
+ 
 }
 
 #apresentacao {
@@ -487,13 +487,17 @@ section {
   grid-template-columns: 1fr auto auto auto auto;
   z-index: 2;
   align-self: start;
+  align-items: center;
 }
 
 .title-bar p {
   justify-self: start;
   font-family: "orbitron", sans-serif;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 10px;
+  white-space: nowrap;
+  text-align: start;
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 .title-bar img {
@@ -504,9 +508,6 @@ section {
   pointer-events: none;
 }
 
-#alisamentos .title-bar p {
-  font-size: 16px;  
-}
 
 /* ---------------------------------------- JANELAS MODAL ----------------------------------------*/
 
@@ -676,8 +677,12 @@ section {
   width: 220px; */
 
   /* tamanho para resolução 1920px */
-  width: 370px;
-  height: 500px;
+  /* width: 300px; */
+  /* height: 410px; */
+
+  height: clamp(300px, 22vw, 410px);
+  aspect-ratio: 220 / 300;
+
   background-color: #ead4c4;
   position: absolute;
 
@@ -686,8 +691,11 @@ section {
   right: 116px; */
 
   /* centraliza na tela do celular para resolução 1920px */
-  top: 220px;
-  right: 140px;
+  /* top: 160px; */
+  /* right: 176px; */
+
+    top: calc(120px + (160 - 120) * ((100vw - 1366px) / 554));
+  right: calc(116px + (176 - 116) * ((100vw - 1366px) / 554));
 
   border-radius: 5%;
   color: black;
@@ -724,7 +732,7 @@ section {
 #phone-screen * {
   font-family: orbitron, sans-serif;
   /* font-size: 16px; */
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .barra-titulo {
@@ -763,8 +771,18 @@ section {
 }
 
 #phone-screen .servicos-container > * {
-  width: 370px;
-  padding: 10px 20px;
+  /*largura para tela 1366 */
+  /* width: 220px; */
+  /* padding: 10px 20px; */
+  
+  /* largura para tela 1920 */
+  /* width: 300px;
+  padding: 5px 10px; */
+
+  width: calc(220px + 80 * ((100vw - 1366px) / 554));
+  padding: 
+    calc(10px - 5 * ((100vw - 1366px) / 554)) 
+    calc(20px - 10 * ((100vw - 1366px) / 554));
   column-gap: 5px;
 }
 
@@ -1173,9 +1191,27 @@ section {
 /* ------------------------- SECTION SOBRE ----------------------------------- */
 
 #sobre {
+  position: relative;
   text-align: center;
   background-color: #ff56be;
 }
+
+#vhs-image {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+#cd-image {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 0;
+  right: 0;
+}
+
 
 #sobre-container {
   display: flex;
@@ -1472,6 +1508,10 @@ section {
   font-size: clamp(16px, 2vw, 24px);
 }
 
+#texto-horarios-container p {
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
 #texto-informacoes-container p {
   font-size: clamp(12px, 1.5vw, 16px);
 }
@@ -1600,12 +1640,34 @@ section {
   }
 
   /* GALERIA */
+
+#camera-layer {
+  width: 30%;
+  height: auto;
+  z-index: 9;
+}
+
+
   .galeria-fotos {
     width: 40%;
     margin-left: 0;
   }
 
+#galeria .conteudo {
+  flex-direction: column;
+}
+
+.galeria-fotos {
+  width: 70%;
+}
+
+
   /* AGENDAMENTO */
+
+#agenda {
+   padding-top: 0;
+}
+
   #agendamento-conteudo {
     flex-direction: column;
     gap: 30px;
@@ -1616,7 +1678,18 @@ section {
     flex-direction: column;
   }
 
+  #agenda-botao-container {
+   
+    flex-direction: row;
+  }
+
   /* SOBRE */
+
+ #sobre {
+    padding-bottom: 100px;
+  }
+
+
   #sobre-conteudo-container {
     flex-direction: column;
     gap: 32px;
@@ -1625,6 +1698,17 @@ section {
   #y2k-espaço-galeria {
     grid-template-columns: repeat(2, 1fr);
   }
+
+    #vhs-image {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+
 
   /* CONTATO */
   #contato-conteudo-container {
@@ -1638,6 +1722,11 @@ section {
 
 /* ================= MOBILE ================= */
 @media (max-width: 600px) {
+  
+  body {
+    overflow-x: hidden;
+  }
+  
   section {
     padding: 24px 16px;
   }
@@ -1693,31 +1782,52 @@ section {
     width: 95vw;
     height: auto;
     max-height: 95vh;
+  
   }
+
+
+  #janela-modal {
+    width: 100%;
+    height: 100%;
+  }
+
+ #conteudo-modal {
+  display: flex;
+  justify-content: center;
+  max-height: 100%;
+ }
 
   .imagens-modal {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    justify-items: center;
+    display: none;
   }
 
-  #img01 {
+
+  #title-barra-modal {
+     font-size: clamp(24px, 3vw, 32px);
+    
+  }
+
+  #phone-screen {
+    max-width: 90%;
+    width: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    height: 90%;
+  }
+
+  #phone-screen * {
+   font-size: clamp(16px, 4vw, 24px);
+  }
+
+  #phone-screen .servicos-container > * {
+    max-width: 100%;
     width: 100%;
-    height: auto;
-  }
-
-  #img02 {
-    width: 70%;
-    max-width: 280px;
-    height: auto;
-  }
-
-  #phone-screen,
-  #pixelated-layer {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-  }
+   
+    
+}
 
   /* GALERIA */
   .galeria-fotos {
@@ -1749,9 +1859,19 @@ section {
   }
 
   /* SOBRE */
+
+  #sobre {
+    padding-bottom: 100px;
+  }
+
   #y2k-espaço-galeria {
     grid-template-columns: 1fr;
   }
+
+
+#cd-image {
+  display: none;
+}
 
   /* CONTATO */
   #mapa-container {
@@ -1761,4 +1881,9 @@ section {
   #informacoes-txt-container {
     flex-direction: column;
   }
+
+
+  #informacoes-txt-container > * {
+  align-items: start;
+}
 }

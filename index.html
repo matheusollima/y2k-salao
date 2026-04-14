@@ -52,8 +52,9 @@
           <img
             src="icons/icons8-menu-50.png"
             alt=""
+            class = "off"
             id="menu-hamburguer"
-            onclick="abrirMenu()"
+            
           />
         </div>
         <ul id="lista-menu-desktop">
@@ -137,7 +138,7 @@
               </li>
               <li class="janela-servico" data-id="alisamentos" id="alisamentos">
                 <div class="title-bar">
-                  <p>Alisamentos e Reduções de Volume</p>
+                  <p>Alisamentos</p>
                   <img src="imgs/minimize-window.png" alt="" />
                   <img src="imgs/maximize-window.png" alt="" />
                   <img src="imgs/close-window.png" alt="" />
@@ -150,6 +151,8 @@
       </section>
 
       <div id="overlay"></div>
+
+      <!-- Modal para detalhes dos serviços -->
       <div class="modal" id="janela-modal">
         <div class="title-bar-modal">
           <span id="title-barra-modal">Detalhes do serviço</span>
@@ -206,13 +209,13 @@
       </div>
 
       <section class="section" id="galeria">
-        <div class="container">
+        <div class="container" id = "galeria-container">
           <div>
             <h1>Galeria</h1>
             <p>Estética 2000 ativada</p>
           </div>
 
-          <div class="conteudo">
+          <div class="conteudo" id = "galeria-conteudo">
             <img
               src="imgs/layers/camera.webp"
               id="camera-layer"
@@ -273,6 +276,7 @@
       </section>
 
       <section class="section" id="sobre">
+        <img id = "vhs-image" src="imgs/Sobre/vhs.webp" alt="vhs image">
         <div class="container" id="sobre-container">
           <h1>Sobre</h1>
           <div id="sobre-conteudo-container">

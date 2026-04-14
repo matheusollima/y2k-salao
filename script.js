@@ -10,6 +10,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+
+// Altura home screen
+
+let homeScreen = document.getElementById("home");
+let alturaHome = homeScreen.offsetHeight;
+homeScreen.style.height = "calc(100dvh - " + alturaHome + "px)";
+
+
+
+
 // Animação subtítulo home
 
 setTimeout(() => {
@@ -74,7 +85,7 @@ janelas_servico.forEach((botao) => {
         tituloMasculino = "Cortes Masculinos";
         tituloFeminino = "Cortes Femininos";
 
-        img_servico.src = "./imgs/imagens modal/corte-cabelo-modal.jpg";
+        img_servico.src = "./imgs/imagens modal/corte-cabelo-modal.webp";
         // titulo_servico.innerText = "Cortes de cabelo ";
         servicosMasculinos = [
           { nome: "Fade", preco: "R$ 30" },
@@ -98,7 +109,7 @@ janelas_servico.forEach((botao) => {
       case "coloracao":
         tituloFeminino = "Coloração - feminino";
         tituloMasculino = "Coloração - masculino";
-        img_servico.src = "./imgs/imagens modal/coloracao-modal.jpg";
+        img_servico.src = "./imgs/imagens modal/coloracao-modal.webp";
         // titulo_servico.innerText = "Coloração";
         servicosFemininos = [
           { nome: "Coloração Global", preco: "R$ 180,00" },
@@ -132,7 +143,7 @@ janelas_servico.forEach((botao) => {
       case "tratamentos-capilares":
         tituloFeminino = "Tratamentos - feminino";
         tituloMasculino = "Tratamentos - masculino";
-        img_servico.src = "./imgs/imagens modal/tratamento-capilar-modal.jpg";
+        img_servico.src = "./imgs/imagens modal/tratamento-capilar-modal.webp";
         // titulo_servico.innerText = "Tratamentos capilares";
         servicosFemininos = [
           { nome: "Hidratação Profunda", preco: "R$ 90,00" },
@@ -165,7 +176,7 @@ janelas_servico.forEach((botao) => {
       case "alisamentos":
         tituloFeminino = "Tratamentos - feminino";
         tituloMasculino = "Tratamentos - masculino";
-        img_servico.src = "./imgs/imagens modal/alisamento-modal.jpg";
+        img_servico.src = "./imgs/imagens modal/alisamento-modal.webp";
         // titulo_servico.innerText = "Alisamentos e reduções de volume";
         servicosFemininos = [
           { nome: "Escova Progressiva", preco: "R$ 300,00" },
