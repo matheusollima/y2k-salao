@@ -908,6 +908,7 @@ section {
 #galeria {
   background-color: #cc9ab9;
   box-shadow: 0 -10px 2000px -5px rgba(0, 0, 0, 1);
+  overflow-x: hidden;
 }
 
 #galeria .conteudo {
