@@ -556,6 +556,7 @@ section {
   font-weight: bold;
   color: #12043c;
   margin-left: 20px;
+  align-self: center;
 }
 
 .buttons {
@@ -596,24 +597,45 @@ section {
 }
 
 .imagens-modal > * {
-  flex: 1;
-  display: flex;
+  
 }
 
 #img-01-modal-container {
   padding: 0 20px;
-}
-
-#img-01-modal-container img {
-}
-
-#img-02-modal-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
-#img-02-modal-container img {
+.phone-wrapper {
+  position: relative;
+  width: 530px;
+  height: 440px;
+
+transform: scale(1);
+ transform-origin: top right;
+}
+
+/* telas menores que full HD */
+@media (max-width: 1600px) {
+  .phone-wrapper {
+    transform: scale(0.9);
+  }
+}
+
+/* notebook padrão */
+@media (max-width: 1366px) {
+  .phone-wrapper {
+    transform: scale(0.70);
+     transform-origin: top left;
+  }
+}
+
+/* telas bem pequenas */
+@media (max-width: 1200px) {
+  .phone-wrapper {
+    transform: scale(0.6);
+  }
 }
 
 /* imagem principal */
@@ -628,16 +650,13 @@ section {
 
 /* ////////////////////////////////////// CELULAR FLIPPER LAYER ////////////////////////////////////// */
 
-#img02 {
+.frame {
   /* tamanho consistente */
-  width: clamp(380px, 380px + 0.397 * (100vw - 1366px), 600px);
-  height: auto;
-  aspect-ratio: 9 / 16;
-  object-fit: contain;
-  justify-self: end;
-  user-select: none;
-  z-index: 999999;
+  width: 100%;
+  display: block;
+  position: relative;
   pointer-events: none;
+  z-index: 2;
 }
 
 /* ---------------------------------------- TELA DO CELULAR ---------------------------------------- */
@@ -668,43 +687,32 @@ section {
 /* ///////////////////////////////////////  Tela do celular com serviços ///////////////////////////////////////////////////// */
 
 #phone-screen {
-  /* tamanho para viewport 1366 x 633 */
-  /* height: 300px; */
-  /* width: 223px;  */
-
   /* tamanho para viewport 1920 x 945 */
-  width: 340px; 
-  height: 440px; 
-
-  
-
-  height: calc(300px + 140 * ((100vh - 633px) / 312));
-  width: calc(223px + 117 * ((100vh - 633px) / 312));
+  /* width: 340px; */
+  /* height: 440px; */
 
   background-color: #ead4c4;
   position: absolute;
 
   /* centraliza na tela do celular para resolução 1366 x 633 */
-  /* top: 120px; */
-  /* right: 112px; */
+  top: 170px;
+  left: 105px;
+
+  /* tamanho para viewport 1366 x 633 */
+  width: 330px;
+  height: 450px;
+  
 
   /* centraliza na tela do celular para resolução 1920 x 945 */
   /* top: 197px;
   right: 157px; */
-
-   top: calc(120px + 77 * ((100vh - 633px) / 312));
-  right: calc(112px + 45 * ((100vh - 633px) / 312));
-
-  border-radius: 5%;
   color: black;
   font-size: 20px;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
   box-sizing: border-box;
   flex-direction: column;
-  border-radius: 30px;
-  z-index: 8;
+  overflow: hidden;
+  z-index: 1;
 }
 
 /* camada pixelada por cima da tela do celular */
@@ -775,24 +783,9 @@ section {
   column-gap: 3px; */
 
   /* largura para tela 1920 x 945 */
-  /* width: 340px;
-  padding: 10px 15px; */
-  /* column-gap: 5px; */
-
-    width: clamp(220px,
-    calc(220px + 120 * ((100vh - 633px) / 312)),
-    340px
-  );
-
-  padding: 10px clamp(8px,
-    calc(8px + 7 * ((100vh - 633px) / 312)),
-    15px
-  );
-
-  column-gap: clamp(3px,
-    calc(3px + 2 * ((100vh - 633px) / 312)),
-    5px
-  );
+  width: 330px;
+  padding: 10px 60px;
+  column-gap: 5px; 
 }
 
 .div-cor01 {
@@ -1613,38 +1606,29 @@ section {
   }
 
   .imagens-modal {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "a"
-      "b";
-
-    gap: 20px;
-    justify-items: center;
+   display: flex;
+   justify-content: center;
   }
 
-  #img01 {
+  #img-01-modal-container {
+    display: none;
+  }
+
+  .phone-wrapper {
+    position: static;
+    transform-origin: center;
+    transform: scale(1);
+  }
+
+  .frame {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-  }
-
-  #img02 {
-    width: clamp(220px, 50vw, 350px);
     height: auto;
     pointer-events: none;
-    position: static; /* remove bug de sobreposição */
+
   }
 
-  #phone-screen,
-  #pixelated-layer {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  #phone-screen{
 
-    top: 0;
-    left: 0;
-    transform: none;
   }
 
   /* GALERIA */
@@ -1799,22 +1783,36 @@ section {
   }
 
   .imagens-modal {
-    display: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+
   }
 
+  .phone-wrapper {
+   transform: scale(0.8);
+   position: relative;
+   top: -160px;
+ 
+  }
+
+@media (max-width: 370px) {
+  .phone-wrapper {
+    transform: scale(0.6);
+    top: -85px;
+  }
+
+
+}
+
+
+
   #title-barra-modal {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(20px, 3vw, 32px);
   }
 
   #phone-screen {
-    max-width: 90%;
-    width: 90%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
-    height: 90%;
+   
   }
 
   #phone-screen * {

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teste Phone</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background: #111;
+        padding: 40px;
+      }
+
+      /* =========================
+       WRAPPER (ESCALA GLOBAL)
+    ========================= */
+      .phone-wrapper {
+        position: relative;
+
+        width: 340px;
+        height: 440px;
+
+        /* RESPONSIVIDADE REAL */
+        transform: scale(clamp(1, calc(100vh / 633), 1.5));
+
+        transform-origin: top right;
+      }
+
+      /* =========================
+       MOLDURA
+    ========================= */
+      .frame {
+        width: 100%;
+        display: block;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* =========================
+       TELA
+    ========================= */
+      #phone-screen {
+        position: absolute;
+
+        /* ⚠️ AJUSTE FINO (depende da imagem) */
+        top: 40px;
+        left: 20px;
+
+        width: 300px;
+        height: 360px;
+
+        background: #ead4c4;
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      /* =========================
+       BARRA SUPERIOR
+    ========================= */
+      .barra-titulo {
+        height: 40px;
+
+        background: linear-gradient(
+          to right,
+          #000033,
+          #0044aa,
+          #0066cc,
+          #0044aa,
+          #000033
+        );
+
+        color: #00f0ff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+      }
+
+      /* =========================
+       CONTEÚDO
+    ========================= */
+      .servicos-container {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        padding: 10px;
+
+        overflow-y: auto;
+        font-family: sans-serif;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 10px;
+
+        background: #d9dddc;
+      }
+
+      .item:nth-child(even) {
+        background: #88807b;
+        color: white;
+      }
+
+      /* =========================
+       BOTÕES
+    ========================= */
+      .phone-buttons {
+        height: 40px;
+
+        background: linear-gradient(
+          to right,
+          #000033,
+          #0044aa,
+          #0066cc,
+          #0044aa,
+          #000033
+        );
+
+        color: #00f0ff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        font-family: sans-serif;
+      }
+
+      .button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="phone-wrapper">
+      <!-- MOLDURA (IMAGEM DE TESTE) -->
+      <img class="frame" src="flipper-phone-layer.png" alt="Moldura celular" />
+
+      <!-- TELA -->
+      <div id="phone-screen">
+        <div class="barra-titulo">MENU</div>
+
+        <div class="servicos-container">
+          <div class="item">
+            <span>Corte</span>
+            <span>R$ 30</span>
+          </div>
+
+          <div class="item">
+            <span>Barba</span>
+            <span>R$ 20</span>
+          </div>
+
+          <div class="item">
+            <span>Sobrancelha</span>
+            <span>R$ 10</span>
+          </div>
+
+          <div class="item">
+            <span>Combo</span>
+            <span>R$ 50</span>
+          </div>
+        </div>
+
+        <div class="phone-buttons">
+          <span class="button">◀</span>
+          <span>OK</span>
+          <span class="button">▶</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
