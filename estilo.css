@@ -1246,10 +1246,12 @@ transform: scale(1);
 
 #sobre-img-01 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 #sobre-img-02 img {
   width: 100%;
+  border-radius: 10px;
 }
 #y2k-espaço-container {
   text-align: left;
